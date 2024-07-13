@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { NavBar, HeaderSection, WelcomeSection } from '$lib';
+</script>
+
+<!-- Navigation Bar -->
+<NavBar useTransition={true} />
+
+<!-- Header Section -->
+<HeaderSection />
+
+<!-- Welcome Section -->
+<WelcomeSection />
+
+<!-- Categories Section -->
+
+<!-- Best Cakes Section -->
+
+<!-- Footer Section -->
