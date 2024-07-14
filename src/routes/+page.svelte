@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { NavBar, HeaderSection, WelcomeSection } from '$lib';
+	import { NavBar, HeaderSection, WelcomeSection, CategorySection, CakeSection, FooterSection } from '$lib';
 </script>
 
 <!-- Navigation Bar -->
@@ -12,7 +12,10 @@
 <WelcomeSection />
 
 <!-- Categories Section -->
+<CategorySection />
 
 <!-- Best Cakes Section -->
+<CakeSection />
 
 <!-- Footer Section -->
+ <FooterSection />

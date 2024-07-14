@@ -23,3 +23,61 @@ export function changeThemeToggle(): void {
 		}
 	}
 }
+
+export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boolean = true): void {
+	carousels.forEach((ele) => {
+		const carouselViewPort = ele.querySelector('.carousel-viewport') as HTMLElement | null;
+		const carouselRightBtn = ele.querySelector('.carousel-right-btn') as HTMLButtonElement | null;
+		const carouselLeftBtn = ele.querySelector('.carousel-left-btn') as HTMLButtonElement | null;
+
+		if (carouselViewPort && carouselRightBtn && carouselLeftBtn) {
+			const carouselWidth = carouselViewPort.clientWidth;
+
+			carouselRightBtn.addEventListener('click', () => {
+				const currentScroll = carouselViewPort.scrollLeft;
+				let nextScroll = currentScroll + carouselWidth;
+
+				if (nextScroll >= carouselViewPort.scrollWidth) {
+					nextScroll = 0;
+				}
+
+				if (smoothScroll) {
+					carouselViewPort.scrollTo({
+						left: nextScroll,
+						behavior: 'smooth'
+					});
+				} else {
+					carouselViewPort.scrollTo({
+						left: nextScroll,
+						behavior: 'instant'
+					});
+				}
+			});
+
+			carouselLeftBtn.addEventListener('click', () => {
+				const currentScroll = carouselViewPort.scrollLeft;
+				let nextScroll = currentScroll - carouselWidth;
+
+				if (nextScroll < 0) {
+					nextScroll = carouselViewPort.scrollWidth - carouselWidth;
+				}
+
+				if (nextScroll >= carouselViewPort.scrollWidth) {
+					nextScroll = carouselViewPort.scrollWidth - carouselWidth;
+				}
+
+				if (smoothScroll) {
+					carouselViewPort.scrollTo({
+						left: nextScroll,
+						behavior: 'smooth'
+					});
+				} else {
+					carouselViewPort.scrollTo({
+						left: nextScroll,
+						behavior: 'instant'
+					});
+				}
+			});
+		}
+	});
+}

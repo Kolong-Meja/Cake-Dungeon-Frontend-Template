@@ -15,7 +15,7 @@
 
 <header id="main-header" class="bg-cover bg-fixed bg-center font-bodoni min-h-screen">
 	<div class="container mx-auto">
-		<div class="py-12 px-5 max-w-screen-xl">
+		<div class="py-12 px-8 max-w-screen-xl">
 			<div class="flex flex-col items-center space-y-40">
 				<img
 					id="logo"
