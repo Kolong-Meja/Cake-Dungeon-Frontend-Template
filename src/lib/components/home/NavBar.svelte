@@ -4,8 +4,7 @@
 	import { CakeDungeonLogo } from '$lib';
 	import { navigationScrollTransition } from '$lib/services/animation';
 	import { onMount } from 'svelte';
-
-	const pages = ['about', 'cakes', 'contact', 'login'];
+	import { serverData } from '$lib/services/pages-data';
 
 	onMount(() => {
 		const navbar = document.querySelector('#navbar');
@@ -26,21 +25,10 @@
 			/>
 		</a>
 		<ul class="flex space-x-6">
-			{#each pages as page}
+			{#each serverData.data as d}
 				<li class="hidden list-none self-center lg:block">
-					<a href={`/${page}`} class="link">
-						{#if page === 'about'}
-							<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out">About Us</span>
-						{/if}
-						{#if page === 'cakes'}
-							<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out">Shopping</span>
-						{/if}
-						{#if page === 'contact'}
-							<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out">Contact Us</span>
-						{/if}
-						{#if page === 'login'}
-							<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out">Sign In</span>
-						{/if}
+					<a href={`/${d.link}`} class="link">
+						<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out" title={d.title}>{d.title}</span>
 					</a>
 				</li>
 			{/each}

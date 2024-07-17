@@ -21,7 +21,7 @@
 					id="logo"
 					src={CakeDungeonLogo}
 					alt="cake"
-					class="rounded-full w-[200px] h-[200px]"
+					class="rounded-full w-[14rem] h-[14rem]"
 				/>
 				<div class="flex flex-col items-center space-y-2">
 					<h1 class=" text-8xl font-bold text-light-cream self-center">Cake Dungeon</h1>
