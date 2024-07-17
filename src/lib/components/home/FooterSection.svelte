@@ -1,11 +1,11 @@
 <svelte:options customElement="footer-section" />
 
-<script>
+<script lang="ts">
 	import SectionTemplate from '../SectionTemplate.svelte';
 	import { CakeDungeonLogo } from '$lib';
 </script>
 
-<SectionTemplate mainSectionBgColor="bg-cream">
+<SectionTemplate bgColor="bg-dark-cream">
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="grid grid-rows-3 grid-flow-col gap-20">
 			<div class="flex justify-between p-3">

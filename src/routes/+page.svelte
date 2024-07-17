@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { NavBar, HeaderSection, WelcomeSection, CategorySection, CakeSection, FooterSection } from '$lib';
+	import { HeaderSection, WelcomeSection, CategorySection, CakeSection, FooterSection } from '$lib';
 </script>
-
-<!-- Navigation Bar -->
-<NavBar useTransition={true} />
 
 <!-- Header Section -->
 <HeaderSection />

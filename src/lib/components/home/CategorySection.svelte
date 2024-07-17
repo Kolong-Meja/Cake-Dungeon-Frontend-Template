@@ -1,6 +1,6 @@
 <svelte:options customElement="category-section" />
 
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import SectionTemplate from '../SectionTemplate.svelte';
 	import { ChocolateCakePicture, CookiesPicture, IceCreamPicture } from '$lib';
@@ -15,7 +15,7 @@
 <SectionTemplate>
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-col items-center space-y-16">
-			<h1 class="text-light-cream font-bold text-5xl uppercase">Categories choices</h1>
+			<h1 class="text-dark-cocoa font-bold text-5xl uppercase">Categories choices</h1>
 			<div class="flex flex-row items-center space-x-10">
 				{#each categories as category}
 					<div class="max-w-xs h-full bg-light-cream bg-center border-0 rounded-lg">

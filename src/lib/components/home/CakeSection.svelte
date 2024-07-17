@@ -1,6 +1,6 @@
 <svelte:options customElement="cake-section" />
 
-<script>
+<script lang="ts">
 	import SectionTemplate from '../SectionTemplate.svelte';
 	import {
 		ChocolateCakeAnotherPicture,
@@ -13,8 +13,6 @@
 	import { carouselSlider } from '$lib/services/animation';
 	import { onMount } from 'svelte';
 
-	const cakes = ['chocolate cake', 'cheesecake', 'red velvet cake', 'carrot cake', 'mousse cake'];
-
 	onMount(() => {
 		const carousels = document.querySelectorAll('.carousel');
 
@@ -22,11 +20,11 @@
 	});
 </script>
 
-<SectionTemplate mainSectionFont="font-lato">
+<SectionTemplate fontFamily="font-lato">
 	<div class="py-12 px-8 max-w-screen-xl carousel">
 		<div class="flex flex-col mx-auto space-y-10">
 			<div class="flex justify-center">
-				<h1 class="text-light-cream font-bodoni font-bold text-5xl uppercase self-center">
+				<h1 class="text-dark-cocoa font-bodoni font-bold text-5xl uppercase self-center">
 					Our Best Cakes
 				</h1>
 			</div>
@@ -49,42 +47,42 @@
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={ChocolateCakeAnotherPicture} alt="chocolate" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Chocolate Cake</span>
-						<span class="text-xl font-normal text-gray-900">Rp. 315.000,00</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Chocolate Cake</span>
+						<span class="text-xl font-normal text-dark-cocoa">Rp. 315.000,00</span>
 					</div>
 					<div
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={CarrotCakePicture} alt="carrot" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Carrot Cake</span>
-						<span class="text-xl font-normal text-gray-900">Rp. 285.000,00</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Carrot Cake</span>
+						<span class="text-xl font-normal text-dark-cocoa">Rp. 285.000,00</span>
 					</div>
 					<div
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={CheeseCakePicture} alt="cheese" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Blueberry Cheesecake</span>
-						<span class="text-xl font-normal text-gray-900">Rp. 340.000,00</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Blueberry Cheesecake</span>
+						<span class="text-xl font-normal text-dark-cocoa">Rp. 340.000,00</span>
 					</div>
 					<div
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={MousseCakePicture} alt="mousse" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Mousse Cake</span>
-						<span class="text-xl font-normal text-gray-900">Rp. 290.000,00</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Mousse Cake</span>
+						<span class="text-xl font-normal text-dark-cocoa">Rp. 290.000,00</span>
 					</div>
 					<div
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={RedVelvetCakePicture} alt="velvet" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Red Velvet Cake</span>
-						<span class="text-xl font-normal text-gray-900">Rp. 350.000,00</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Red Velvet Cake</span>
+						<span class="text-xl font-normal text-dark-cocoa">Rp. 350.000,00</span>
 					</div>
 					<div
 						class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
 					>
 						<img src={SpongeCakePicture} alt="sponge" class="w-64 h-64 rounded-full" />
-						<span class="text-2xl font-bold text-gray-900">Sponge Cake</span>
+						<span class="text-2xl font-bold text-dark-cocoa">Sponge Cake</span>
 						<span class="text-xl">Rp. 280.000,00</span>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 <svelte:options customElement="welcome-section" />
 
-<script>
+<script lang="ts">
 	import { WelcomeSectionPicture } from '$lib';
 	import SectionTemplate from '../SectionTemplate.svelte';
 

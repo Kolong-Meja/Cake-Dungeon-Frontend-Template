@@ -1,11 +1,11 @@
 <svelte:options customElement="section-template" />
 
-<script>
-	export let mainSectionBgColor = 'bg-little-dark-cream';
-	export let mainSectionFont = 'font-bodoni';
+<script lang="ts">
+	export let bgColor = 'bg-cream';
+	export let fontFamily = 'font-bodoni';
 </script>
 
-<section class={`${mainSectionBgColor} ${mainSectionFont} min-h-screen`}>
+<section class={`${bgColor} ${fontFamily} min-h-screen`}>
 	<div class="container mx-auto">
 		<slot />
 	</div>

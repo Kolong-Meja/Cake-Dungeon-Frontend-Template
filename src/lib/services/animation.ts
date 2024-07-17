@@ -24,6 +24,28 @@ export function changeThemeToggle(): void {
 	}
 }
 
+export function navigationScrollTransition(
+	navbar: Element | null,
+	axisY: number = 100,
+	currentScreenWidth: number = 1024
+): void {
+	window.addEventListener('scroll', () => {
+		if (navbar) {
+			if (window.innerWidth >= currentScreenWidth) {
+				if (window.scrollY > axisY) {
+					navbar.classList.add('animate-slideInDown');
+					navbar.classList.add('shadow-lg');
+					navbar.classList.remove('hidden');
+					navbar.classList.add('fixed');
+					navbar.classList.remove('animate-slideOutUp');
+				} else if (window.scrollY === 0) {
+					navbar.classList.add('animate-slideOutUp');
+				}
+			}
+		}
+	});
+}
+
 export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boolean = true): void {
 	carousels.forEach((ele) => {
 		const carouselViewPort = ele.querySelector('.carousel-viewport') as HTMLElement | null;

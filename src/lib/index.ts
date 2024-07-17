@@ -18,6 +18,9 @@ import CarrotCakePicture from './images/Carrot Cake.jpg';
 import MousseCakePicture from './images/Mousse Cake.jpg';
 import RedVelvetCakePicture from './images/Red Velvet Cake.jpg';
 import SpongeCakePicture from './images/Sponge Cake.jpg';
+import OnlineDeliveryPicture from './images/Online Delivery.jpg';
+import FreeArticlePicture from './images/Read Article.jpg';
+import CookBookPicture from './images/Cook Book.jpg';
 
 export {
 	changeThemeToggle,
@@ -33,6 +36,9 @@ export {
 	MousseCakePicture,
 	RedVelvetCakePicture,
 	SpongeCakePicture,
+	OnlineDeliveryPicture,
+	FreeArticlePicture,
+	CookBookPicture,
 	NavBar,
 	HeaderSection,
 	WelcomeSection,
