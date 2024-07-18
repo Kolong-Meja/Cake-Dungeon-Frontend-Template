@@ -34,7 +34,6 @@ export function navigationScrollTransition(
 			if (window.innerWidth >= currentScreenWidth) {
 				if (window.scrollY > axisY) {
 					navbar.classList.add('animate-slideInDown');
-					navbar.classList.add('shadow-lg');
 					navbar.classList.remove('hidden');
 					navbar.classList.add('fixed');
 					navbar.classList.remove('animate-slideOutUp');

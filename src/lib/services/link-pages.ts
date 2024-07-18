@@ -1,23 +1,23 @@
-export const serverData = {
-    data: [
+export const pages = {
+    links: [
         {
             id: 1,
-            link: 'about',
+            url: 'about',
             title: 'About Us'
         },
         {
             id: 2,
-            link: 'cakes',
+            url: 'cakes',
             title: 'Shopping'
         },
         {
             id: 3,
-            link: 'articles',
+            url: 'articles',
             title: 'Articles'
         },
         {
             id: 4,
-            link: 'login',
+            url: 'login',
             title: 'Sign In'
         }
     ]

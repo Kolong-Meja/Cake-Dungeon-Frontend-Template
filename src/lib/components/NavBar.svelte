@@ -4,7 +4,7 @@
 	import { CakeDungeonLogo } from '$lib';
 	import { navigationScrollTransition } from '$lib/services/animation';
 	import { onMount } from 'svelte';
-	import { serverData } from '$lib/services/pages-data';
+	import { pages } from '$lib/services/link-pages';
 
 	onMount(() => {
 		const navbar = document.querySelector('#navbar');
@@ -25,10 +25,10 @@
 			/>
 		</a>
 		<ul class="flex space-x-6">
-			{#each serverData.data as d}
+			{#each pages.links as link}
 				<li class="hidden list-none self-center lg:block">
-					<a href={`/${d.link}`} class="link">
-						<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out" title={d.title}>{d.title}</span>
+					<a href={`/${link.url}`} class="link">
+						<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out" title={link.title}>{link.title}</span>
 					</a>
 				</li>
 			{/each}

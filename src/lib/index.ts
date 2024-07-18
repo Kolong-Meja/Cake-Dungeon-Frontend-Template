@@ -1,11 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 import { changeThemeToggle } from './services/animation';
-import NavBar from './components/home/NavBar.svelte';
-import HeaderSection from './components/home/HeaderSection.svelte';
-import WelcomeSection from './components/home/WelcomeSection.svelte';
-import CategorySection from './components/home/CategorySection.svelte';
-import CakeSection from './components/home/CakeSection.svelte';
-import FooterSection from './components/home/FooterSection.svelte';
+import NavBar from './components/NavBar.svelte';
+import Footer from './components/Footer.svelte';
 import CakeDungeonLogo from './images/Cake Dungeon-Logo.png';
 import HeaderBgPicture from './images/Cakes - Header BG Low Brightness.jpg';
 import WelcomeSectionPicture from './images/Cake Welcome Section Picture.jpg';
@@ -40,9 +36,5 @@ export {
 	FreeArticlePicture,
 	CookBookPicture,
 	NavBar,
-	HeaderSection,
-	WelcomeSection,
-	CategorySection,
-	CakeSection,
-	FooterSection
+	Footer
 };

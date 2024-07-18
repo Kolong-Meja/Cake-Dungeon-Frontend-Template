@@ -1,18 +1,18 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import SectionTemplate from '$lib/components/SectionTemplate.svelte';
+	import Section from '$lib/components/Section.svelte';
 	import {
 		CakeDungeonLogo,
 		OnlineDeliveryPicture,
 		FreeArticlePicture,
 		CookBookPicture,
-		FooterSection
+		Footer
 	} from '$lib';
 
 	export let data: PageData;
 </script>
 
-<SectionTemplate bgColor="bg-lighter-cream" fontFamily="font-bodoni">
+<Section bgColor="bg-lighter-cream" fontFamily="font-bodoni">
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-row items-center space-x-10">
 			<div class="flex flex-col items-start space-y-6 p-3">
@@ -29,14 +29,14 @@
 			<img src={CakeDungeonLogo} alt="logo" class="rounded-lg w-[28rem] h-[28rem] shadow-xl" />
 		</div>
 	</div>
-</SectionTemplate>
+</Section>
 
-<SectionTemplate bgColor="bg-lighter-cream" fontFamily="font-bodoni">
+<Section bgColor="bg-lighter-cream" fontFamily="font-bodoni">
 	<div class="py-12 px-8 w-full">
 		<div class="flex flex-col items-center space-y-12">
 			<div class="flex flex-col items-center space-y-6 p-3">
 				<h1 class="text-5xl text-dark-cocoa font-bold">Our Services</h1>
-				<p class="text-base text-dark-cocoa font-normal leading-relaxed px-24">
+				<p class="text-lg text-dark-cocoa font-normal leading-relaxed px-24 text-center">
 					Cake Dungeon Online Store always helps you and other customers' needs with the various
 					services we provide, such as Fast Delivery Service, Free Article Service, Free Delivery
 					Service for the first purchase, and Free Cook Book service for the first purchase.
@@ -50,6 +50,6 @@
 			<p class="text-xl font-semibold text-dark-cocoa self-start uppercase">#Choose what you like</p>
 		</div>
 	</div>
-</SectionTemplate>
+</Section>
 
-<FooterSection />
+<Footer />
