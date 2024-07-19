@@ -1,5 +1,4 @@
 // place files you want to import through the `$lib` alias in this folder.
-import { changeThemeToggle } from './services/animation';
 import NavBar from './components/NavBar.svelte';
 import Footer from './components/Footer.svelte';
 import CakeDungeonLogo from './images/Cake Dungeon-Logo.png';
@@ -19,7 +18,6 @@ import FreeArticlePicture from './images/Read Article.jpg';
 import CookBookPicture from './images/Cook Book.jpg';
 
 export {
-	changeThemeToggle,
 	CakeDungeonLogo,
 	HeaderBgPicture,
 	WelcomeSectionPicture,

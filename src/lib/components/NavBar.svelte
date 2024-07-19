@@ -13,7 +13,7 @@
 	});
 </script>
 
-<nav id="navbar" class="hidden bg-cream z-10 w-full">
+<nav id="navbar" class="hidden bg-cream-500 z-10 w-full">
 	<div class="flex justify-between p-5 mx-3">
 		<a href="/">
 			<img
@@ -28,7 +28,7 @@
 			{#each pages.links as link}
 				<li class="hidden list-none self-center lg:block">
 					<a href={`/${link.url}`} class="link">
-						<span class="nav-text font-bodoni font-semibold text-md text-lighter-cream hover:text-dark-cocoa transition-all duration-300 ease-in-out" title={link.title}>{link.title}</span>
+						<span class="nav-text font-bodoni font-semibold text-md text-gray-50 hover:text-brown-900 transition-all duration-300 ease-in-out" title={link.title}>{link.title}</span>
 					</a>
 				</li>
 			{/each}

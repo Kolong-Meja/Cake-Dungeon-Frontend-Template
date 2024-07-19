@@ -11,7 +11,7 @@
 	});
 </script>
 
-<section class="bg-lighter-cream font-lato min-h-screen">
+<section class="bg-gray-50 font-lato min-h-screen">
 	<div class="flex flex-row h-screen overflow-y-hidden">
 		<div
 			id="side-picture"
@@ -28,7 +28,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="bg-lighter-cream py-12 px-8 w-full self-center">
+		<div class="bg-gray-50 py-12 px-8 w-full self-center">
 			<form class="flex flex-col space-y-6">
 				<div class="flex flex-col space-y-2 items-center">
 					<h1 class="text-dark-cocoa font-bold text-4xl">Sign In to your account</h1>
@@ -36,7 +36,7 @@
 						Or <span class="text-blue-400"><a href="/register">create an account</a></span>
 					</p>
 				</div>
-				<div class="flex items-center border-2 p-2.5 rounded-2xl mb-4">
+				<div class="flex items-center border-2 p-2.5 rounded-2xl bg-gray-50">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5 text-gray-400"
@@ -59,7 +59,7 @@
 						placeholder="Email Address"
 					/>
 				</div>
-				<div class="flex items-center border-2 p-2.5 rounded-2xl">
+				<div class="flex items-center border-2 p-2.5 rounded-2xl bg-gray-50">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5 text-gray-400"
@@ -82,12 +82,12 @@
 				</div>
 				<button
 					type="submit"
-					class="w-full bg-cream p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-dark-cream transition-all duration-300 ease-in-out"
+					class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
 					>Login</button
 				>
 				<div class="flex flex-row">
 					<p
-						class="text-base text-dark-cocoa hover:text-blue-500 underline transition-all duration-300 ease-in-out self-start"
+						class="text-base text-brown-900 hover:text-blue-500 underline transition-all duration-300 ease-in-out self-start"
 					>
 						<a href={'#'}> Forgot Password ? </a>
 					</p>

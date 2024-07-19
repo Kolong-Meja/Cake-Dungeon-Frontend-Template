@@ -1,7 +1,5 @@
-<svelte:options customElement="section-template" />
-
 <script lang="ts">
-	export let bgColor = 'bg-cream';
+	export let bgColor = 'bg-cream-200';
 	export let fontFamily = 'font-bodoni';
 </script>
 

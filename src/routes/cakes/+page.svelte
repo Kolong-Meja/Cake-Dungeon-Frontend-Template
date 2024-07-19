@@ -1,0 +1,133 @@
+<script lang="ts">
+	import Section from '$lib/components/Section.svelte';
+	import { Button, Dropdown, DropdownItem, Input, Badge } from 'flowbite-svelte';
+	import { ChevronDownOutline, SearchOutline } from 'flowbite-svelte-icons';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+</script>
+
+<Section bgColor="bg-lighter-cream" fontFamily="font-lato">
+	<div class="py-12 px-8 max-w-screen-xl">
+		<div class="flex flex-col space-y-12">
+			<div class="flex flex-col justify-center items-center space-y-2">
+				<h1 class="text-dark-cocoa text-4xl font-bold uppercase">Cakes</h1>
+				<p class="text-gray-500 text-xl text-center font-normal leading-relaxed">
+					Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras
+					sed dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue
+					lorem. Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
+				</p>
+			</div>
+			<div class="flex flex-row justify-between items-center">
+				<div class="flex flex-row space-x-4">
+					<form action="/search" class="flex-1 w-96 self-center">
+						<div class="relative">
+							<div class="flex absolute inset-y-0 start-0 items-center ps-3 pointer-events-none">
+								<SearchOutline class="w-4 h-4" />
+							</div>
+							<Input id="search-navbar" color="base" class="ps-10" placeholder="Search cake..." />
+						</div>
+					</form>
+					<Button color="primary">Sort By<ChevronDownOutline class="ps-2 text-dark-cocoa" /></Button
+					>
+					<Dropdown class="w-48 overflow-y-auto py-1 h-48">
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Featured</span>
+						</DropdownItem>
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Newest Arrivals</span>
+						</DropdownItem>
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Lower Price</span>
+						</DropdownItem>
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Highest Price</span>
+						</DropdownItem>
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Best Selling</span>
+						</DropdownItem>
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Alphabetically, A-Z</span>
+						</DropdownItem>
+
+						<DropdownItem class="flex items-center text-base font-normal gap-2">
+							<span>Alphabetically, Z-A</span>
+						</DropdownItem>
+					</Dropdown>
+				</div>
+				<div class="flex flex-row space-x-4">
+					<span class="text-gray-900 text-base font-semibold">View As</span>
+					<button class="active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor"
+							class="bi bi-list-ul w-6 h-6 self-center text-gray-400"
+							viewBox="0 0 16 16"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+							/>
+						</svg>
+					</button>
+					<button class="active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="currentColor"
+							class="bi bi-grid w-6 h-6 self-center text-gray-400"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="grid grid-cols-4 grid-flow-row gap-6">
+				{#each data.cakes as cake}
+					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 p-5">
+						<img src={cake.image} alt={cake.name} />
+						<div class="flex flex-col space-y-2 items-start py-2">
+							<a href={'#'}>
+								<p class="text-lg font-normal tracking-tight text-brown-900">
+									{cake.name} —
+									<Badge rounded color={cake.status !== 'On Sale' ? 'red' : 'green'}
+										>{cake.status}</Badge
+									>
+								</p>
+							</a>
+							<p class="text-brown-900 text-xl font-bold">
+								{new Intl.NumberFormat('id-ID', {
+									style: 'currency',
+									currency: 'IDR'
+								}).format(cake.price)}
+							</p>
+							<a
+								href={'#'}
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-900 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 ease-in-out"
+							>
+								Order Now
+								<svg
+									class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</Section>

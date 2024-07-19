@@ -5,7 +5,7 @@
 	import { CakeDungeonLogo } from '$lib';
 </script>
 
-<Section bgColor="bg-dark-cream">
+<Section bgColor="bg-cream-900">
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="grid grid-rows-3 grid-flow-col gap-20">
 			<div class="flex justify-between p-3">
@@ -18,18 +18,18 @@
 						class="rounded-full w-[6rem] h-[6rem]"
 					/>
 				</a>
-				<h1 class="items-end self-center text-4xl font-bold text-light-cream">
+				<h1 class="items-end self-center text-4xl font-bold text-gray-50">
 					#Taste Better, Heart More Comfortable
 				</h1>
 			</div>
 			<div class="flex flex-row space-x-16 p-3">
 				<div class="flex flex-col space-y-6 font-lato">
-					<h1 class="text-2xl font-bold uppercase text-light-cream">Social Media</h1>
+					<h1 class="text-2xl font-bold uppercase text-gray-50">Social Media</h1>
 					<div class="flex flex-row space-x-5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
-							class="bi bi-instagram w-[1.60rem] h-[1.60rem] text-light-cream self-center"
+							class="bi bi-instagram w-[1.60rem] h-[1.60rem] text-gray-50 self-center"
 							viewBox="0 0 16 16"
 						>
 							<path
@@ -39,7 +39,7 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
-							class="bi bi-threads w-[1.60rem] h-[1.60rem] text-light-cream self-center"
+							class="bi bi-threads w-[1.60rem] h-[1.60rem] text-gray-50 self-center"
 							viewBox="0 0 16 16"
 						>
 							<path
@@ -49,7 +49,7 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
-							class="bi bi-facebook w-[1.60rem] h-[1.60rem] text-light-cream self-center"
+							class="bi bi-facebook w-[1.60rem] h-[1.60rem] text-gray-50 self-center"
 							viewBox="0 0 16 16"
 						>
 							<path
@@ -59,7 +59,7 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
-							class="bi bi-youtube w-[1.60rem] h-[1.60rem] text-light-cream self-center"
+							class="bi bi-youtube w-[1.60rem] h-[1.60rem] text-gray-50 self-center"
 							viewBox="0 0 16 16"
 						>
 							<path
@@ -69,44 +69,44 @@
 					</div>
 				</div>
 				<div class="flex flex-col space-y-6 font-lato">
-					<h1 class="text-2xl font-bold uppercase text-light-cream">Contact Us</h1>
+					<h1 class="text-2xl font-bold uppercase text-gray-50">Contact Us</h1>
 					<div class="flex flex-col space-y-4">
 						<div class="flex flex-col space-y-2">
-							<h1 class="text-xl font-bold uppercase text-light-cream">Whatsapp</h1>
-							<p class="text-lg font-normal uppercase text-light-cream">+62-858-9118-0613</p>
+							<h1 class="text-xl font-bold uppercase text-gray-50">Whatsapp</h1>
+							<p class="text-lg font-normal uppercase text-gray-50">+62-858-9118-0613</p>
 						</div>
                         <div class="flex flex-col space-y-2">
-                            <h1 class="text-xl font-bold uppercase text-light-cream">Email</h1>
-                            <p class="text-lg font-normal lowercase text-light-cream">cakedungeon2024@gmail.com</p>
+                            <h1 class="text-xl font-bold uppercase text-gray-50">Email</h1>
+                            <p class="text-lg font-normal lowercase text-gray-50">cakedungeon2024@gmail.com</p>
                         </div>
 					</div>
 				</div>
 				<div class="flex flex-col space-y-6 font-lato">
-					<h1 class="text-2xl font-bold uppercase text-light-cream">Other Information</h1>
+					<h1 class="text-2xl font-bold uppercase text-gray-50">Other Information</h1>
 					<div class="flex flex-col space-y-4">
-                        <p class="text-lg font-normal uppercase text-light-cream">Terms & Condition</p>
-                        <p class="text-lg font-normal uppercase text-light-cream">FAQ & Help</p>
-                        <p class="text-lg font-normal uppercase text-light-cream">About Us</p>
+                        <p class="text-lg font-normal uppercase text-gray-50">Terms & Condition</p>
+                        <p class="text-lg font-normal uppercase text-gray-50">FAQ & Help</p>
+                        <p class="text-lg font-normal uppercase text-gray-50">About Us</p>
                     </div>
 				</div>
                 <div class="flex flex-col space-y-6 font-lato">
-                    <h1 class="text-2xl font-bold uppercase text-light-cream">Operational Hours</h1>
+                    <h1 class="text-2xl font-bold uppercase text-gray-50">Operational Hours</h1>
                     <div class="flex flex-col space-y-4">
                         <div class="flex flex-col space-y-2">
-							<h1 class="text-lg font-bold uppercase text-light-cream">Weekdays</h1>
-							<p class="text-base font-normal uppercase text-light-cream">Monday - Friday: 07:30 - 21:30 (GTM+7)</p>
+							<h1 class="text-lg font-bold uppercase text-gray-50">Weekdays</h1>
+							<p class="text-base font-normal uppercase text-gray-50">Monday - Friday: 07:30 - 21:30 (GTM+7)</p>
 						</div>
                     </div>
                     <div class="flex flex-col space-y-4">
                         <div class="flex flex-col space-y-2">
-							<h1 class="text-lg font-bold uppercase text-light-cream">Weekend</h1>
-							<p class="text-base font-normal uppercase text-light-cream">Saturday - Sunday: 08:00 - 21:00 (GTM+7)</p>
+							<h1 class="text-lg font-bold uppercase text-gray-50">Weekend</h1>
+							<p class="text-base font-normal uppercase text-gray-50">Saturday - Sunday: 08:00 - 21:00 (GTM+7)</p>
 						</div>
                     </div>
                 </div>
 			</div>
             <dir class="flex justify-center items-end font-lato">
-                <p class="text-base font-bold uppercase text-light-cream">Copyright © 2024 Cake dungeon. All rights reserved.</p>
+                <p class="text-base font-bold uppercase text-gray-50">Copyright © 2024 Cake dungeon. All rights reserved.</p>
             </dir>
 		</div>
 	</div>

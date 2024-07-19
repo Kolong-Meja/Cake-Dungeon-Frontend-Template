@@ -8,4 +8,4 @@
 <slot />
 
 <!-- Footer Section -->
-<Footer />
+ <Footer />

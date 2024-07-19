@@ -11,7 +11,7 @@
 	});
 </script>
 
-<section class="bg-lighter-cream font-lato min-h-screen">
+<section class="bg-gray-50 font-lato min-h-screen">
 	<div class="flex flex-row">
 		<div
 			id="side-picture"
@@ -28,7 +28,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="bg-lighter-cream w-full self-center overflow-y-auto">
+		<div class="bg-gray-50 w-full self-center overflow-y-auto">
 			<div class="flex flex-col py-12 px-8 space-y-4">
 				<h1 class="text-dark-cocoa font-bold text-4xl self-center mb-4">Register your account</h1>
 				<form class="flex flex-col space-y-4">
@@ -119,7 +119,7 @@
 					</div>
 					<button
 						type="submit"
-						class="w-full bg-cream p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-dark-cream transition-all duration-300 ease-in-out"
+						class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
 						>Register Account</button
 					>
 				</form>
