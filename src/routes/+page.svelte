@@ -40,10 +40,10 @@
 					loading="lazy"
 				/>
 				<div class="flex flex-col justify-center items-center space-y-4">
-					<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-8xl md:text-start">
+					<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-7xl lg:text-8xl">
 						Cake Dungeon
 					</h1>
-					<p class="text-xl font-semibold text-gray-50 text-center md:text-3xl md:text-start">
+					<p class="text-xl font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl">
 						󠁐#Explore all cakes flavors
 					</p>
 				</div>
@@ -57,11 +57,15 @@
 <Section bgColor="bg-lighter-cream">
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
 		<div class="flex flex-col items-center space-y-6 md:flex-row md:space-x-10">
-			<div class="flex flex-col items-start space-y-6 p-3">
-				<h1 class="text-4xl font-bold text-brown-900 uppercase md:text-6xl">
+			<div class="flex flex-col items-center space-y-6 p-3 lg:items-start">
+				<h1
+					class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl lg:text-start"
+				>
 					Welcome to cake dungeon
 				</h1>
-				<p class="text-xl font-normal leading-normal text-brown-900 md:text-2xl">
+				<p
+					class="text-xl font-normal leading-relaxed text-center text-brown-900 md:text-2xl lg:text-start"
+				>
 					Indulge in a delightful journey where every bite is an experience to savor. Welcome to a
 					haven for cake enthusiasts, where exquisite flavors and delectable treats await you. Meet
 					a community of fellow cake lovers, eager to share in the joy of every mouthful. Embark on
@@ -70,15 +74,15 @@
 				</p>
 				<a
 					href="/cakes"
-					class="inline-flex self-center p-2.5 text-xs font-medium text-center text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-sm md:p-3 md:self-start"
+					class="p-2.5 text-xs font-medium text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-sm md:p-3"
 				>
-					<span class="font-bodoni text-gray-50 text-lg">Start Explore</span>
+					<span class="font-bodoni text-gray-50 text-lg text-center">Start Explore</span>
 				</a>
 			</div>
 			<img
 				src={WelcomeSectionPicture}
 				alt="cake"
-				class="hidden rounded-lg w-[36rem] h-[36rem] md:block"
+				class="hidden rounded-lg w-[36rem] h-[36rem] lg:block"
 				loading="lazy"
 			/>
 		</div>
@@ -89,17 +93,19 @@
 <!-- Categories Section -->
 <Section bgColor="bg-lighter-cream">
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
-		<div class="flex flex-col items-center space-y-10 md:space-y-16">
-			<h1 class="text-4xl font-bold text-brown-900 uppercase text-center md:text-5xl">
+		<div class="flex flex-col items-center space-y-8 md:space-y-12 lg:space-y-16">
+			<h1 class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl">
 				Categories choices
 			</h1>
-			<div class="flex flex-col items-center space-y-6 md:flex-row md:space-x-10">
+			<div
+				class="grid grid-rows-3 grid-flow-col gap-4 md:gap-6 lg:gap-8 lg:grid-cols-3 lg:grid-flow-row"
+			>
 				{#each data.categories as category}
 					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 rounded-lg">
 						<img src={category.image} alt={category.name} loading="lazy" />
 						<div class="p-5">
 							<a href={'#'}>
-								<h5 class="mb-2 text-2xl font-bold tracking-tight text-brown-900 uppercase">
+								<h5 class="mb-2 text-xl font-bold tracking-tight text-brown-900 uppercase lg:text-2xl">
 									{category.title}
 								</h5>
 							</a>
@@ -142,7 +148,7 @@
 <Section bgColor="bg-lighter-cream" fontFamily="font-lato">
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8 carousel">
 		<div class="flex flex-col mx-auto space-y-6 md:space-y-10">
-			<h1 class="text-brown-900 font-bodoni font-bold text-4xl uppercase text-center md:text-5xl">
+			<h1 class="text-brown-900 font-bodoni font-bold text-3xl uppercase text-center md:text-5xl">
 				Our Best Cakes
 			</h1>
 

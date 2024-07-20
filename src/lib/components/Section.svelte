@@ -3,7 +3,7 @@
 	export let fontFamily = 'font-bodoni';
 </script>
 
-<section class={`${bgColor} ${fontFamily} h-auto max-w-full md:min-h-screen`}>
+<section class={`${bgColor} ${fontFamily} min-h-screen max-w-full`}>
 	<div class="container mx-auto">
 		<slot />
 	</div>
