@@ -8,7 +8,7 @@
 	} from '$lib';
 </script>
 
-<Section bgColor="bg-cream-50" fontFamily="font-bodoni">
+<Section bgColor="bg-lighter-cream" fontFamily="font-bodoni">
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-row items-center space-x-10">
 			<div class="flex flex-col items-start space-y-6 p-3">
@@ -28,12 +28,12 @@
 					the best service to you.
 				</p>
 			</div>
-			<img src={CakeDungeonLogo} alt="logo" class="rounded-lg w-[28rem] h-[28rem] shadow-xl" />
+			<img src={CakeDungeonLogo} alt="logo" class="rounded-lg w-[28rem] h-[28rem] shadow-xl" loading="lazy" />
 		</div>
 	</div>
 </Section>
 
-<Section bgColor="bg-cream-50" fontFamily="font-bodoni">
+<Section bgColor="bg-lighter-cream" fontFamily="font-bodoni">
 	<div class="py-12 px-8 w-full">
 		<div class="flex flex-col items-center space-y-12">
 			<div class="flex flex-col items-center space-y-6 p-3">
@@ -45,9 +45,9 @@
 				</p>
 			</div>
 			<div class="flex flex-row items-center space-x-10">
-				<img src={OnlineDeliveryPicture} alt="logo" class="rounded-lg w-[24rem] object-contain" />
-				<img src={FreeArticlePicture} alt="logo" class="rounded-lg w-[24rem] object-contain" />
-				<img src={CookBookPicture} alt="logo" class="rounded-lg w-[24rem] object-contain" />
+				<img src={OnlineDeliveryPicture} alt="logo" class="rounded-lg w-[24rem] object-contain" loading="lazy" />
+				<img src={FreeArticlePicture} alt="logo" class="rounded-lg w-[24rem] object-contain" loading="lazy" />
+				<img src={CookBookPicture} alt="logo" class="rounded-lg w-[24rem] object-contain" loading="lazy" />
 			</div>
 			<p class="text-xl font-semibold text-brown-900 self-start uppercase">#Choose what you like</p>
 		</div>

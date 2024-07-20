@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { CakeDungeonLogo, HeaderBgPicture, WelcomeSectionPicture, Footer, NavBar } from '$lib';
 	import Section from '$lib/components/Section.svelte';
-	import { carouselSlider } from '$lib/services/animation';
+	import { carouselSlider, fadeInScrollAnimation } from '$lib/services/animation';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
@@ -10,12 +10,14 @@
 	onMount(() => {
 		const header = document.getElementById('header');
 		const carousels = document.querySelectorAll('.carousel');
+		const targets = document.querySelectorAll('.show-on-scroll');
 
 		if (header) {
 			header.style.backgroundImage = `url(${HeaderBgPicture})`;
 		}
 
 		carouselSlider(carousels);
+		fadeInScrollAnimation(targets, 'animate-fadeIn');
 	});
 </script>
 
@@ -45,8 +47,8 @@
 <!-- End of Header Section -->
 
 <!-- Welcome Section -->
-<Section>
-	<div class="py-12 px-8 max-w-screen-xl">
+<Section bgColor="bg-lighter-cream">
+	<div class="show-on-scroll py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-row items-center space-x-10">
 			<div class="flex flex-col items-start space-y-7 p-3">
 				<h1 class="text-6xl font-bold text-brown-900 uppercase">Welcome to cake dungeon</h1>
@@ -57,7 +59,7 @@
 				</p>
 				<a
 					href="/cakes"
-					class="inline-flex items-center p-3 text-sm font-medium text-center text-white bg-brown-900 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 ease-in-out"
+					class="inline-flex items-center p-3 text-sm font-medium text-center text-white bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
 				>
 					<span class="font-bodoni text-gray-50 text-lg">Start Explore</span>
 				</a>
@@ -74,8 +76,8 @@
 <!-- End of Welcome Section -->
 
 <!-- Categories Section -->
-<Section>
-	<div class="py-12 px-8 max-w-screen-xl">
+<Section bgColor="bg-lighter-cream">
+	<div class="show-on-scroll py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-col items-center space-y-16">
 			<h1 class="text-brown-900 font-bold text-5xl uppercase">Categories choices</h1>
 			<div class="flex flex-row items-center space-x-10">
@@ -95,7 +97,7 @@
 							</p>
 							<a
 								href={'#'}
-								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-900 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 ease-in-out"
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
 							>
 								Order Now
 								<svg
@@ -124,8 +126,8 @@
 <!-- End of Categories Section -->
 
 <!-- Best Cakes Section -->
-<Section fontFamily="font-lato">
-	<div class="py-12 px-8 max-w-screen-xl carousel">
+<Section bgColor="bg-lighter-cream" fontFamily="font-lato">
+	<div class="show-on-scroll py-12 px-8 max-w-screen-xl carousel">
 		<div class="flex flex-col mx-auto space-y-10">
 			<div class="flex justify-center">
 				<h1 class="text-brown-900 font-bodoni font-bold text-5xl uppercase self-center">
@@ -138,7 +140,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-left-circle-fill w-[3rem] h-[3rem] text-light-cream"
+						class="bi bi-arrow-left-circle-fill w-[3rem] h-[3rem] text-brown-400"
 						viewBox="0 0 16 16"
 					>
 						<path
@@ -166,7 +168,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-right-circle-fill w-[3rem] h-[3rem] text-light-cream"
+						class="bi bi-arrow-right-circle-fill w-[3rem] h-[3rem] text-brown-400"
 						viewBox="0 0 16 16"
 					>
 						<path

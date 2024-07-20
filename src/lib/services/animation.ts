@@ -102,3 +102,24 @@ export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boo
 		}
 	});
 }
+
+export function fadeInScrollAnimation(targets: NodeListOf<Element>, animation: string) {
+	const callback = function (entries: Array<IntersectionObserverEntry>) {
+		entries.forEach((entry) => {
+			console.log(entry);
+
+			if (entry.isIntersecting) {
+				entry.target.classList.add(animation);
+			} else {
+				entry.target.classList.remove(animation);
+			}
+		});
+	};
+
+	const observer = new IntersectionObserver(callback);
+
+	targets.forEach(function (target) {
+		target.classList.add('opacity-0');
+		observer.observe(target);
+	});
+}

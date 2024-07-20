@@ -11,8 +11,8 @@
 	<div class="py-12 px-8 max-w-screen-xl">
 		<div class="flex flex-col space-y-12">
 			<div class="flex flex-col justify-center items-center space-y-2">
-				<h1 class="text-dark-cocoa text-4xl font-bold uppercase">Cakes</h1>
-				<p class="text-gray-500 text-xl text-center font-normal leading-relaxed">
+				<h1 class="text-brown-900 text-4xl font-bold uppercase">Cakes</h1>
+				<p class="text-brown-900 text-xl text-center font-normal leading-relaxed">
 					Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras
 					sed dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue
 					lorem. Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
@@ -28,7 +28,8 @@
 							<Input id="search-navbar" color="base" class="ps-10" placeholder="Search cake..." />
 						</div>
 					</form>
-					<Button color="primary">Sort By<ChevronDownOutline class="ps-2 text-dark-cocoa" /></Button
+					<Button color="primary" class="text-base font-bold text-gray-50"
+						>Sort By<ChevronDownOutline class="ps-2 text-gray-50" size="lg" /></Button
 					>
 					<Dropdown class="w-48 overflow-y-auto py-1 h-48">
 						<DropdownItem class="flex items-center text-base font-normal gap-2">
@@ -57,7 +58,7 @@
 				</div>
 				<div class="flex flex-row space-x-4">
 					<span class="text-gray-900 text-base font-semibold">View As</span>
-					<button class="active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+					<button class="active:bg-cream-700 focus:outline-none focus:ring focus:ring-cream-300">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -70,7 +71,7 @@
 							/>
 						</svg>
 					</button>
-					<button class="active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+					<button class="active:bg-cream-700 focus:outline-none focus:ring focus:ring-cream-300">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -86,26 +87,25 @@
 			</div>
 			<div class="grid grid-cols-4 grid-flow-row gap-6">
 				{#each data.cakes as cake}
-					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 p-5">
-						<img src={cake.image} alt={cake.name} />
-						<div class="flex flex-col space-y-2 items-start py-2">
-							<a href={'#'}>
-								<p class="text-lg font-normal tracking-tight text-brown-900">
-									{cake.name} —
-									<Badge rounded color={cake.status !== 'On Sale' ? 'red' : 'green'}
-										>{cake.status}</Badge
-									>
+					<div class="max-w-xs h-full border bg-gray-50 bg-center p-4">
+						<img src={cake.image} alt={cake.name} class="w-64 h-64 object-cover" loading="lazy" />
+						<div class="flex flex-col space-y-4 items-start py-2">
+							<div class="flex flex-col space-y-2">
+								<a href={'#'}>
+									<p class="text-lg font-normal tracking-tight text-brown-900">
+										{cake.name} 
+									</p>
+								</a>
+								<p class="text-brown-900 text-xl font-bold">
+									{new Intl.NumberFormat('id-ID', {
+										style: 'currency',
+										currency: 'IDR'
+									}).format(cake.price)}
 								</p>
-							</a>
-							<p class="text-brown-900 text-xl font-bold">
-								{new Intl.NumberFormat('id-ID', {
-									style: 'currency',
-									currency: 'IDR'
-								}).format(cake.price)}
-							</p>
+							</div>
 							<a
 								href={'#'}
-								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-900 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 ease-in-out"
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
 							>
 								Order Now
 								<svg

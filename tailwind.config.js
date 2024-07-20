@@ -13,30 +13,55 @@ export default {
 				'light-cream': '#FFEEDE',
 				brown: {
 					50: '#F8F4E1',
+					100: '#e0dcc5',
+					200: '#bda68f',
+					300: '#b09478',
 					400: '#AF8F6F',
+					500: '#9c7c5c',
 					700: '#74512D',
-					900: '#543310',
+					800: '#573715',
+					900: '#543310'
 				},
 				cream: {
 					50: '#FFF2E1',
+					100: '#eddeca',
 					200: '#EAD8C0',
+					300: '#d6c3a9',
+					400: '#c2ae93',
 					500: '#D1BB9E',
+					600: '#ccb393',
+					700: '#b8a48a',
+					800: '#b09b80',
 					900: '#A79277'
 				},
 				primary: {
-					50: '#FFF5F2',
-					100: '#FFF1EE',
-					200: '#FFE4DE',
-					300: '#FFD5CC',
-					400: '#FFBCAD',
-					500: '#FE795D',
-					600: '#EF562F',
-					700: '#EB4F27',
-					800: '#CC4522',
-					900: '#A5371B'
+					50: '#FFF2E1',
+					100: '#eddeca',
+					200: '#EAD8C0',
+					300: '#d6c3a9',
+					400: '#c2ae93',
+					500: '#D1BB9E',
+					600: '#ccb393',
+					700: '#b8a48a',
+					800: '#b09b80',
+					900: '#A79277'
 				}
 			},
 			keyframes: {
+				fadeIn: {
+					'0%': { opacity: 0 },
+					'100%': { opacity: 1 }
+				},
+				fadeInDown: {
+					'0%': {
+						opacity: 0,
+						transform: 'translate3d(0, -100%, 0)'
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translate3d(0, 0, 0)'
+					}
+				},
 				slideInDown: {
 					'0%': {
 						transform: 'translateY(-100%)',
@@ -64,8 +89,10 @@ export default {
 			lato: ['Lato', 'sans-serif']
 		},
 		animation: {
-			slideInDown: 'slideInDown 0.1s ease-out forwards',
-			slideOutUp: 'slideOutUp 0.1s ease-out forwards'
+			fadeIn: 'fadeIn 1s ease-in forwards',
+			fadeInDown: 'fadeInDown 1s ease-in forwards',
+			slideInDown: 'slideInDown 0.2s ease-out forwards',
+			slideOutUp: 'slideOutUp 0.2s ease-out forwards'
 		}
 	},
 	plugins: [flowbitePlugin],

@@ -16,6 +16,12 @@ import SpongeCakePicture from './images/Sponge Cake.jpg';
 import OnlineDeliveryPicture from './images/Online Delivery.jpg';
 import FreeArticlePicture from './images/Read Article.jpg';
 import CookBookPicture from './images/Cook Book.jpg';
+import StrawberryCheesecakePicture from './images/Strawberry Cheesecake.jpg';
+import StrawberryCharlotteCakePicture from './images/Charlotte Cake with Strawberry.jpg';
+import CranberryCharlotteCakePicture from './images/Charlotte Cake with Cranberry.jpg';
+import AppleCakePicture from './images/Apple Cake.jpg';
+import BananaCakePicture from './images/Banana Cake.jpg';
+import BlackForestCakePicture from './images/Black Forest Cake.jpg';
 
 export {
 	CakeDungeonLogo,
@@ -33,6 +39,12 @@ export {
 	OnlineDeliveryPicture,
 	FreeArticlePicture,
 	CookBookPicture,
+	StrawberryCheesecakePicture,
+	StrawberryCharlotteCakePicture,
+	CranberryCharlotteCakePicture,
+	AppleCakePicture,
+	BananaCakePicture,
+	BlackForestCakePicture,
 	NavBar,
 	Footer
 };
