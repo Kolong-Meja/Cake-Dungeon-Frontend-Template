@@ -25,20 +25,27 @@
 <NavBar />
 
 <!-- Header Section -->
-<header id="header" class="bg-cover bg-fixed bg-center font-bodoni min-h-screen">
+<header
+	id="header"
+	class="bg-auto bg-fixed bg-center font-bodoni min-h-screen max-w-full md:bg-cover"
+>
 	<div class="container mx-auto">
-		<div class="py-24 px-20 max-w-screen-xl">
+		<div class="py-14 px-10 max-w-full md:py-24 md:px-20">
 			<div class="flex flex-col items-center space-y-20">
 				<img
 					id="logo"
 					src={CakeDungeonLogo}
 					alt="cake"
-					class="rounded-full w-[14rem] h-[14rem]"
+					class="rounded-full w-[10rem] h-[10rem] md:w-[14rem] md:h-[14rem]"
 					loading="lazy"
 				/>
-				<div class="flex flex-col items-center space-y-2">
-					<h1 class=" text-8xl font-bold text-gray-50 self-center">Cake Dungeon</h1>
-					<p class="text-3xl font-semibold text-gray-50 self-center">󠁐#Explore all cakes flavors</p>
+				<div class="flex flex-col justify-center items-center space-y-4">
+					<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-8xl md:text-start">
+						Cake Dungeon
+					</h1>
+					<p class="text-xl font-semibold text-gray-50 text-center md:text-3xl md:text-start">
+						󠁐#Explore all cakes flavors
+					</p>
 				</div>
 			</div>
 		</div>
@@ -48,18 +55,22 @@
 
 <!-- Welcome Section -->
 <Section bgColor="bg-lighter-cream">
-	<div class="show-on-scroll py-12 px-8 max-w-screen-xl">
-		<div class="flex flex-row items-center space-x-10">
-			<div class="flex flex-col items-start space-y-7 p-3">
-				<h1 class="text-6xl font-bold text-brown-900 uppercase">Welcome to cake dungeon</h1>
-				<p class="text-2xl font-normal leading-normal text-brown-900">
-					This is your place to gather valuable experience filled with the high taste of cake. You
-					will meet thousands of cake monsters who are ready to fill your stomach to the brim. Enjoy
-					the adventure and stay full.
+	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
+		<div class="flex flex-col items-center space-y-6 md:flex-row md:space-x-10">
+			<div class="flex flex-col items-start space-y-6 p-3">
+				<h1 class="text-4xl font-bold text-brown-900 uppercase md:text-6xl">
+					Welcome to cake dungeon
+				</h1>
+				<p class="text-xl font-normal leading-normal text-brown-900 md:text-2xl">
+					Indulge in a delightful journey where every bite is an experience to savor. Welcome to a
+					haven for cake enthusiasts, where exquisite flavors and delectable treats await you. Meet
+					a community of fellow cake lovers, eager to share in the joy of every mouthful. Embark on
+					this sweet adventure and let your taste buds revel in the richness of our creations. Enjoy
+					the journey and stay blissfully satisfied.
 				</p>
 				<a
 					href="/cakes"
-					class="inline-flex items-center p-3 text-sm font-medium text-center text-white bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
+					class="inline-flex self-center p-2.5 text-xs font-medium text-center text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-sm md:p-3 md:self-start"
 				>
 					<span class="font-bodoni text-gray-50 text-lg">Start Explore</span>
 				</a>
@@ -67,7 +78,7 @@
 			<img
 				src={WelcomeSectionPicture}
 				alt="cake"
-				class="rounded-lg w-[36rem] h-[36rem]"
+				class="hidden rounded-lg w-[36rem] h-[36rem] md:block"
 				loading="lazy"
 			/>
 		</div>
@@ -77,10 +88,12 @@
 
 <!-- Categories Section -->
 <Section bgColor="bg-lighter-cream">
-	<div class="show-on-scroll py-12 px-8 max-w-screen-xl">
-		<div class="flex flex-col items-center space-y-16">
-			<h1 class="text-brown-900 font-bold text-5xl uppercase">Categories choices</h1>
-			<div class="flex flex-row items-center space-x-10">
+	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
+		<div class="flex flex-col items-center space-y-10 md:space-y-16">
+			<h1 class="text-4xl font-bold text-brown-900 uppercase text-center md:text-5xl">
+				Categories choices
+			</h1>
+			<div class="flex flex-col items-center space-y-6 md:flex-row md:space-x-10">
 				{#each data.categories as category}
 					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 rounded-lg">
 						<img src={category.image} alt={category.name} loading="lazy" />
@@ -127,20 +140,18 @@
 
 <!-- Best Cakes Section -->
 <Section bgColor="bg-lighter-cream" fontFamily="font-lato">
-	<div class="show-on-scroll py-12 px-8 max-w-screen-xl carousel">
-		<div class="flex flex-col mx-auto space-y-10">
-			<div class="flex justify-center">
-				<h1 class="text-brown-900 font-bodoni font-bold text-5xl uppercase self-center">
-					Our Best Cakes
-				</h1>
-			</div>
+	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8 carousel">
+		<div class="flex flex-col mx-auto space-y-6 md:space-y-10">
+			<h1 class="text-brown-900 font-bodoni font-bold text-4xl uppercase text-center md:text-5xl">
+				Our Best Cakes
+			</h1>
 
-			<div class="flex items-center flex-row justify-center gap-4">
+			<div class="flex flex-row items-center justify-center gap-2 md:gap-4">
 				<div class="cursor-pointer carousel-left-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-left-circle-fill w-[3rem] h-[3rem] text-brown-400"
+						class="bi bi-arrow-left-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[3rem] md:h-[3rem]"
 						viewBox="0 0 16 16"
 					>
 						<path
@@ -148,12 +159,19 @@
 						/>
 					</svg>
 				</div>
-				<div class="flex flex-row max-w-full h-full overflow-x-hidden carousel-viewport">
+				<div
+					class="flex flex-row max-w-full h-full bg-brown-50 rounded-lg overflow-x-hidden carousel-viewport md:flex-row"
+				>
 					{#each data.cakes as cake}
 						<div
-							class="w-4/12 gap-4 flex-col p-9 items-center flex-shrink-0 flex justify-center text-center"
+							class="flex flex-col justify-center items-center w-full p-6 gap-3 shrink-0 text-center md:w-4/12 md:p-9 md:gap-4"
 						>
-							<img src={cake.image} alt="chocolate" class="w-64 h-64 rounded-full" loading="lazy" />
+							<img
+								src={cake.image}
+								alt="chocolate"
+								class="w-full h-full md:w-64 md:h-64 md:rounded-full"
+								loading="lazy"
+							/>
 							<span class="text-lg font-bold text-brown-900">{cake.name}</span>
 							<span class="text-2xl font-normal text-brown-900"
 								>{new Intl.NumberFormat('id-ID', {
@@ -168,7 +186,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-right-circle-fill w-[3rem] h-[3rem] text-brown-400"
+						class="bi bi-arrow-right-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[3rem] md:h-[3rem]"
 						viewBox="0 0 16 16"
 					>
 						<path

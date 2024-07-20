@@ -27,19 +27,16 @@ export function changeThemeToggle(): void {
 export function navigationScrollTransition(
 	navbar: Element | null,
 	axisY: number = 100,
-	currentScreenWidth: number = 1024
 ): void {
 	window.addEventListener('scroll', () => {
 		if (navbar) {
-			if (window.innerWidth >= currentScreenWidth) {
-				if (window.scrollY > axisY) {
-					navbar.classList.add('animate-slideInDown');
-					navbar.classList.remove('hidden');
-					navbar.classList.add('fixed');
-					navbar.classList.remove('animate-slideOutUp');
-				} else if (window.scrollY === 0) {
-					navbar.classList.add('animate-slideOutUp');
-				}
+			if (window.scrollY > axisY) {
+				navbar.classList.add('animate-slideInDown');
+				navbar.classList.remove('hidden');
+				navbar.classList.add('fixed');
+				navbar.classList.remove('animate-slideOutUp');
+			} else if (window.scrollY === 0) {
+				navbar.classList.add('animate-slideOutUp');
 			}
 		}
 	});
