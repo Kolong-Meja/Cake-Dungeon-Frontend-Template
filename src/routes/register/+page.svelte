@@ -1,21 +1,21 @@
 <script lang="ts">
-	import { HeaderBgPicture, CakeDungeonLogo } from '$lib';
+	import { Cakes, CakeDungeonLogo } from '$lib';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		const sidePicture = document.getElementById('side-picture');
 
 		if (sidePicture) {
-			sidePicture.style.backgroundImage = `url(${HeaderBgPicture})`;
+			sidePicture.style.backgroundImage = `url(${Cakes})`;
 		}
 	});
 </script>
 
-<section class="bg-gray-50 font-lato min-h-screen">
-	<div class="flex flex-row">
+<section class="bg-gray-50 font-lato min-h-screen max-w-full">
+	<div class="flex flex-col md:flex-row">
 		<div
 			id="side-picture"
-			class="bg-cover bg-center bg-fixed flex h-screen sticky top-0 w-full justify-center items-center"
+			class="flex bg-cover bg-center bg-fixed h-screen w-full static justify-center items-center md:sticky md:top-0"
 		>
 			<div>
 				<a href={'/'} title="Cake Dungeon Online Store">
@@ -23,16 +23,20 @@
 						id="logo"
 						src={CakeDungeonLogo}
 						alt="cake"
-						class="rounded-full w-[14rem] h-[14rem]"
+						class="rounded-full w-48 h-48 md:w-56 md:h-56"
 					/>
 				</a>
 			</div>
 		</div>
-		<div class="bg-gray-50 w-full self-center overflow-y-auto">
-			<div class="flex flex-col py-12 px-8 space-y-4">
-				<h1 class="text-dark-cocoa font-bold text-4xl self-center mb-4">Register your account</h1>
+		<div
+			class="bg-gray-50 min-h-screen py-16 px-8 w-full flex flex-col justify-center md:overflow-y-auto"
+		>
+			<div class="flex flex-col space-y-6 max-w-md mx-auto w-full">
+				<h1 class="text-gray-900 font-semibold text-2xl text-center md:text-3xl">
+					Register your account
+				</h1>
 				<form class="flex flex-col space-y-4">
-					<div class="flex items-center border-2 p-2.5 rounded-2xl">
+					<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-5 w-5 text-gray-400"
@@ -46,14 +50,14 @@
 							/>
 						</svg>
 						<input
-							class="w-full bg-transparent outline-none border-none px-2"
+							class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
 							type="text"
 							name="fullname"
 							id="fullname"
 							placeholder="Full name"
 						/>
 					</div>
-					<div class="flex items-center border-2 p-2.5 rounded-2xl">
+					<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -66,14 +70,14 @@
 							/>
 						</svg>
 						<input
-							class="w-full bg-transparent outline-none border-none px-2"
+							class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
 							type="text"
 							name="phone-number"
 							id="phone-number"
 							placeholder="Phone Number"
 						/>
 					</div>
-					<div class="flex items-center border-2 p-2.5 rounded-2xl">
+					<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-5 w-5 text-gray-400"
@@ -89,14 +93,14 @@
 							/>
 						</svg>
 						<input
-							class="w-full bg-transparent outline-none border-none px-2"
+							class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
 							type="text"
 							name="email"
 							id="email"
 							placeholder="Email Address"
 						/>
 					</div>
-					<div class="flex items-center border-2 p-2.5 rounded-2xl">
+					<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-5 w-5 text-gray-400"
@@ -110,7 +114,7 @@
 							/>
 						</svg>
 						<input
-							class="w-full bg-transparent outline-none border-none px-2"
+							class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
 							type="text"
 							name="password"
 							id="password"
@@ -119,17 +123,17 @@
 					</div>
 					<button
 						type="submit"
-						class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
+						class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-base font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
 						>Register Account</button
 					>
 				</form>
-				<span class="text-xl font-normal text-dark-cocoa self-center">Or</span>
-				<div class="flex flex-col space-y-2">
+				<span class="text-lg font-normal text-gray-900 self-center md:text-xl">Or</span>
+				<div class="flex flex-col space-y-4">
 					<button
-						class="flex flex-row justify-center items-center bg-gray-50 border border-gray-300 rounded-2xl w-full p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-cream"
+						class="flex flex-row justify-center items-center bg-gray-50 border border-gray-300 rounded-2xl w-full p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cream-700"
 					>
 						<svg
-							class="h-6 w-6 mr-2"
+							class="h-5 w-5 mr-2"
 							xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink"
 							viewBox="-0.5 0 48 48"
@@ -166,13 +170,13 @@
 								</g>
 							</g>
 						</svg>
-						<span class="text-lg text-dark-cocoa font-normal">Login with Google</span>
+						<span class="text-base text-gray-900 font-normal md:text-lg">Login with Google</span>
 					</button>
 					<button
-						class="flex flex-row justify-center items-center bg-gray-50 border border-gray-300 rounded-2xl w-full p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-cream"
+						class="flex flex-row justify-center items-center bg-gray-50 border border-gray-300 rounded-2xl w-full p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cream-700"
 					>
 						<svg
-							class="h-6 w-6 mr-2"
+							class="h-5 w-5 mr-2"
 							xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink"
 							viewBox="0 0 48 48"
@@ -189,7 +193,7 @@
 							</g>
 						</svg>
 
-						<span class="text-lg text-dark-cocoa font-normal">Login with Facebook</span>
+						<span class="text-base text-gray-900 font-normal md:text-lg">Login with Facebook</span>
 					</button>
 				</div>
 			</div>

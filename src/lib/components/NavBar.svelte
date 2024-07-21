@@ -4,8 +4,8 @@
 	import { CakeDungeonLogo } from '$lib';
 	import { navigationScrollTransition } from '$lib/services/animation';
 	import { onMount } from 'svelte';
-	import { pages } from '$lib/services/link-pages';
-
+	import { pages } from '$lib/services/nav-links';
+	
 	onMount(() => {
 		const mobileMenuBtn = document.getElementById('mobile-menu-button');
 		const mobileMenu = document.getElementById('mobile-menu');
@@ -21,7 +21,9 @@
 
 <nav id="navbar" class="bg-cream-500 z-10 w-full">
 	<div class="flex justify-between p-5 mx-3">
-		<a href="/">
+		<a
+			href={'/'}
+		>
 			<img
 				id="logo"
 				src={CakeDungeonLogo}
@@ -55,7 +57,7 @@
 		<ul class="hidden lg:flex space-x-6">
 			{#each pages.links as link}
 				<li class="list-none self-center">
-					<a href={`/${link.url}`} class="link">
+					<a href={`${link.url}`} class="link">
 						<span
 							class="nav-text font-bodoni font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
 							title={link.title}>{link.title}</span
@@ -70,7 +72,7 @@
 		<ul class="flex flex-col space-y-4 p-5">
 			{#each pages.links as link}
 				<li class="list-none">
-					<a href={`/${link.url}`} class="link">
+					<a href={`${link.url}`} class="link">
 						<span
 							class="nav-text font-bodoni font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
 							title={link.title}>{link.title}</span

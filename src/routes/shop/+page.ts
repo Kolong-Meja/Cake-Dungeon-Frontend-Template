@@ -1,17 +1,16 @@
 import type { PageLoad } from './$types';
 import {
-	ChocolateCakeAnotherPicture,
-	CheeseCakePicture,
-	CarrotCakePicture,
-	MousseCakePicture,
-	RedVelvetCakePicture,
-	SpongeCakePicture,
-	StrawberryCheesecakePicture,
-	StrawberryCharlotteCakePicture,
-	CranberryCharlotteCakePicture,
-	AppleCakePicture,
-	BananaCakePicture,
-	BlackForestCakePicture
+	AppleCake,
+	BananaCake,
+	BirthdayCake,
+	BlackForestCake,
+	CarrotCake,
+	CheeseCake,
+	ChocolateCake,
+	LemonSpongeCake,
+	MousseCake,
+	OrangeCake,
+	RedVelvetCake
 } from '$lib';
 
 export const load: PageLoad = async () => {
@@ -28,7 +27,7 @@ export const load: PageLoad = async () => {
 				weight: 0.35,
 				category: 'cakes',
 				status: 'On Sale',
-				image: ChocolateCakeAnotherPicture
+				image: ChocolateCake
 			},
 			{
 				id: 2,
@@ -41,11 +40,11 @@ export const load: PageLoad = async () => {
 				weight: 0.37,
 				category: 'cakes',
 				status: 'On Sale',
-				image: CarrotCakePicture
+				image: CarrotCake
 			},
 			{
 				id: 3,
-				name: 'Blueberry Cheesecake',
+				name: 'Cheesecake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 340000.0,
@@ -54,7 +53,7 @@ export const load: PageLoad = async () => {
 				weight: 0.33,
 				category: 'cakes',
 				status: 'On Sale',
-				image: CheeseCakePicture
+				image: CheeseCake
 			},
 			{
 				id: 4,
@@ -67,7 +66,7 @@ export const load: PageLoad = async () => {
 				weight: 0.3,
 				category: 'cakes',
 				status: 'On Sale',
-				image: MousseCakePicture
+				image: MousseCake
 			},
 			{
 				id: 5,
@@ -80,11 +79,11 @@ export const load: PageLoad = async () => {
 				weight: 0.35,
 				category: 'cakes',
 				status: 'On Sale',
-				image: RedVelvetCakePicture
+				image: RedVelvetCake
 			},
 			{
 				id: 6,
-				name: 'Sponge Cake',
+				name: 'Lemon Sponge Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 280000.0,
@@ -93,24 +92,24 @@ export const load: PageLoad = async () => {
 				weight: 0.39,
 				category: 'cakes',
 				status: 'On Sale',
-				image: SpongeCakePicture
+				image: LemonSpongeCake
 			},
 			{
 				id: 7,
-				name: 'Strawberry Cheesecake',
+				name: 'Birthday Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
-				price: 320000.0,
+				price: 365000.0,
 				stock: 100,
 				size: 'small, medium, large',
-				weight: 0.4,
+				weight: 0.42,
 				category: 'cakes',
 				status: 'On Sale',
-				image: StrawberryCheesecakePicture
+				image: BirthdayCake
 			},
 			{
 				id: 8,
-				name: 'Charlotte Cake with Craberries',
+				name: 'Apple Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 300000.0,
@@ -119,11 +118,11 @@ export const load: PageLoad = async () => {
 				weight: 0.35,
 				category: 'cakes',
 				status: 'On Sale',
-				image: CranberryCharlotteCakePicture
+				image: AppleCake
 			},
 			{
 				id: 9,
-				name: 'Charlotte Cake with Strawberries',
+				name: 'Banana Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 325000.0,
@@ -132,11 +131,11 @@ export const load: PageLoad = async () => {
 				weight: 0.38,
 				category: 'cakes',
 				status: 'On Sale',
-				image: StrawberryCharlotteCakePicture
+				image: BananaCake
 			},
 			{
 				id: 10,
-				name: 'Apple Cake',
+				name: 'Black Forest Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 275000.0,
@@ -145,11 +144,11 @@ export const load: PageLoad = async () => {
 				weight: 0.36,
 				category: 'cakes',
 				status: 'On Sale',
-				image: AppleCakePicture
+				image: BlackForestCake
 			},
 			{
 				id: 11,
-				name: 'Banana Cake',
+				name: 'Orange Cake',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 				price: 275000.0,
@@ -158,20 +157,7 @@ export const load: PageLoad = async () => {
 				weight: 0.37,
 				category: 'cakes',
 				status: 'On Sale',
-				image: BananaCakePicture
-			},
-			{
-				id: 12,
-				name: 'Black Forest Cake',
-				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
-				price: 335000.0,
-				stock: 100,
-				size: 'small, medium, large',
-				weight: 0.41,
-				category: 'cakes',
-				status: 'On Sale',
-				image: BlackForestCakePicture
+				image: OrangeCake
 			}
 		]
 	};

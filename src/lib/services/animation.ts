@@ -24,10 +24,7 @@ export function changeThemeToggle(): void {
 	}
 }
 
-export function navigationScrollTransition(
-	navbar: Element | null,
-	axisY: number = 100,
-): void {
+export function navigationScrollTransition(navbar: Element | null, axisY: number = 100): void {
 	window.addEventListener('scroll', () => {
 		if (navbar) {
 			if (window.scrollY > axisY) {
@@ -42,7 +39,7 @@ export function navigationScrollTransition(
 	});
 }
 
-export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boolean = true): void {
+export function carouselSlider(carousels: NodeListOf<Element>): void {
 	carousels.forEach((ele) => {
 		const carouselViewPort = ele.querySelector('.carousel-viewport') as HTMLElement | null;
 		const carouselRightBtn = ele.querySelector('.carousel-right-btn') as HTMLButtonElement | null;
@@ -59,17 +56,10 @@ export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boo
 					nextScroll = 0;
 				}
 
-				if (smoothScroll) {
-					carouselViewPort.scrollTo({
-						left: nextScroll,
-						behavior: 'smooth'
-					});
-				} else {
-					carouselViewPort.scrollTo({
-						left: nextScroll,
-						behavior: 'instant'
-					});
-				}
+				carouselViewPort.scrollTo({
+					left: nextScroll,
+					behavior: 'smooth'
+				});
 			});
 
 			carouselLeftBtn.addEventListener('click', () => {
@@ -78,23 +68,14 @@ export function carouselSlider(carousels: NodeListOf<Element>, smoothScroll: boo
 
 				if (nextScroll < 0) {
 					nextScroll = carouselViewPort.scrollWidth - carouselWidth;
-				}
-
-				if (nextScroll >= carouselViewPort.scrollWidth) {
+				} else if (nextScroll >= carouselViewPort.scrollWidth) {
 					nextScroll = carouselViewPort.scrollWidth - carouselWidth;
 				}
 
-				if (smoothScroll) {
-					carouselViewPort.scrollTo({
-						left: nextScroll,
-						behavior: 'smooth'
-					});
-				} else {
-					carouselViewPort.scrollTo({
-						left: nextScroll,
-						behavior: 'instant'
-					});
-				}
+				carouselViewPort.scrollTo({
+					left: nextScroll,
+					behavior: 'smooth'
+				});
 			});
 		}
 	});

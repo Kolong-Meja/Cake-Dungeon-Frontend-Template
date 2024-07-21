@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CakeDungeonLogo, HeaderBgPicture, WelcomeSectionPicture, Footer, NavBar } from '$lib';
+	import { CakeDungeonLogo, Cakes, Cake, Footer, NavBar } from '$lib';
 	import Section from '$lib/components/Section.svelte';
 	import { carouselSlider, fadeInScrollAnimation } from '$lib/services/animation';
 	import { onMount } from 'svelte';
@@ -13,7 +13,7 @@
 		const targets = document.querySelectorAll('.show-on-scroll');
 
 		if (header) {
-			header.style.backgroundImage = `url(${HeaderBgPicture})`;
+			header.style.backgroundImage = `url(${Cakes})`;
 		}
 
 		carouselSlider(carousels);
@@ -54,7 +54,7 @@
 <!-- End of Header Section -->
 
 <!-- Welcome Section -->
-<Section bgColor="bg-lighter-cream">
+<Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
 		<div class="flex flex-col items-center space-y-6 md:flex-row md:space-x-10">
 			<div class="flex flex-col items-center space-y-6 p-3 lg:items-start">
@@ -73,14 +73,14 @@
 					the journey and stay blissfully satisfied.
 				</p>
 				<a
-					href="/cakes"
+					href={'#'}
 					class="p-2.5 text-xs font-medium text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-sm md:p-3"
 				>
 					<span class="font-bodoni text-gray-50 text-lg text-center">Start Explore</span>
 				</a>
 			</div>
 			<img
-				src={WelcomeSectionPicture}
+				src={Cake}
 				alt="cake"
 				class="hidden rounded-lg w-[36rem] h-[36rem] lg:block"
 				loading="lazy"
@@ -91,21 +91,23 @@
 <!-- End of Welcome Section -->
 
 <!-- Categories Section -->
-<Section bgColor="bg-lighter-cream">
+<Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8">
 		<div class="flex flex-col items-center space-y-8 md:space-y-12 lg:space-y-16">
 			<h1 class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl">
 				Categories choices
 			</h1>
 			<div
-				class="grid grid-rows-3 grid-flow-col gap-4 md:gap-6 lg:gap-8 lg:grid-cols-3 lg:grid-flow-row"
+				class="grid grid-rows-3 grid-flow-col gap-4 md:gap-6 lg:gap-8 lg:grid-rows-1 lg:grid-cols-3 lg:grid-flow-row"
 			>
 				{#each data.categories as category}
-					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 rounded-lg">
+					<div class="max-w-xs h-full bg-brown-50 bg-center border-0 rounded-lg md:max-w-md">
 						<img src={category.image} alt={category.name} loading="lazy" />
 						<div class="p-5">
 							<a href={'#'}>
-								<h5 class="mb-2 text-xl font-bold tracking-tight text-brown-900 uppercase lg:text-2xl">
+								<h5
+									class="mb-2 text-lg font-bold tracking-tight text-brown-900 uppercase md:text-xl lg:text-2xl"
+								>
 									{category.title}
 								</h5>
 							</a>
@@ -145,19 +147,20 @@
 <!-- End of Categories Section -->
 
 <!-- Best Cakes Section -->
-<Section bgColor="bg-lighter-cream" fontFamily="font-lato">
+<Section bgColor="bg-lighter-cream" fontFamily="font-lato" responsiveDesign>
 	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8 carousel">
 		<div class="flex flex-col mx-auto space-y-6 md:space-y-10">
-			<h1 class="text-brown-900 font-bodoni font-bold text-3xl uppercase text-center md:text-5xl">
+			<h1
+				class="text-brown-900 font-bodoni font-bold text-3xl uppercase text-center md:text-4xl lg:text-5xl"
+			>
 				Our Best Cakes
 			</h1>
-
 			<div class="flex flex-row items-center justify-center gap-2 md:gap-4">
 				<div class="cursor-pointer carousel-left-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-left-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[3rem] md:h-[3rem]"
+						class="bi bi-arrow-left-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[2.5rem] md:h-[2.5rem] lg:w-[3rem] lg:h-[3rem]"
 						viewBox="0 0 16 16"
 					>
 						<path
@@ -165,12 +168,10 @@
 						/>
 					</svg>
 				</div>
-				<div
-					class="flex flex-row max-w-full h-full bg-brown-50 rounded-lg overflow-x-hidden carousel-viewport md:flex-row"
-				>
+				<div class="flex flex-row max-w-full h-full rounded-lg overflow-x-hidden carousel-viewport">
 					{#each data.cakes as cake}
 						<div
-							class="flex flex-col justify-center items-center w-full p-6 gap-3 shrink-0 text-center md:w-4/12 md:p-9 md:gap-4"
+							class="flex flex-col justify-center items-center w-full p-2 gap-2 shrink-0 text-center md:w-6/12 md:p-3 md:gap-3 lg:w-4/12 lg:p-4 lg:gap-4"
 						>
 							<img
 								src={cake.image}
@@ -178,8 +179,9 @@
 								class="w-full h-full md:w-64 md:h-64 md:rounded-full"
 								loading="lazy"
 							/>
-							<span class="text-lg font-bold text-brown-900">{cake.name}</span>
-							<span class="text-2xl font-normal text-brown-900"
+							<span class="text-lg font-bold text-brown-900 md:text-xl lg:text-xl">{cake.name}</span
+							>
+							<span class="text-2xl font-normal text-brown-900 md:text-3xl lg:text-3xl"
 								>{new Intl.NumberFormat('id-ID', {
 									style: 'currency',
 									currency: 'IDR'
@@ -192,7 +194,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-arrow-right-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[3rem] md:h-[3rem]"
+						class="bi bi-arrow-right-circle-fill w-[2rem] h-[2rem] text-brown-400 md:w-[2.5rem] md:h-[2.5rem] lg:w-[3rem] lg:h-[3rem]"
 						viewBox="0 0 16 16"
 					>
 						<path

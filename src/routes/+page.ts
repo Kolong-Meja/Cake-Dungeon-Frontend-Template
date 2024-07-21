@@ -1,17 +1,17 @@
 import type { PageLoad } from './$types';
 import {
-	ChocolateCakePicture,
-	CookiesPicture,
-	IceCreamPicture,
-	ChocolateCakeAnotherPicture,
-	CheeseCakePicture,
-	CarrotCakePicture,
-	MousseCakePicture,
-	RedVelvetCakePicture,
-	SpongeCakePicture,
-	StrawberryCheesecakePicture,
-	CranberryCharlotteCakePicture,
-	StrawberryCharlotteCakePicture,
+	AppleCake,
+	BananaCake,
+	BirthdayCake,
+	BlackForestCake,
+	CarrotCake,
+	CheeseCake,
+	Cookies,
+	ChocolateCake,
+	IceCream,
+	LemonSpongeCake,
+	MousseCake,
+	RedVelvetCake
 } from '$lib';
 
 export const load: PageLoad = async () => {
@@ -20,19 +20,19 @@ export const load: PageLoad = async () => {
 			id: 1,
 			name: 'cakes',
 			title: 'Cakes',
-			image: ChocolateCakePicture
+			image: BirthdayCake
 		},
 		{
 			id: 2,
 			name: 'cookies',
 			title: 'Cookies',
-			image: CookiesPicture
+			image: Cookies
 		},
 		{
 			id: 3,
 			name: 'ice-cream',
 			title: 'Ice Cream',
-			image: IceCreamPicture
+			image: IceCream
 		}
 	];
 
@@ -48,7 +48,7 @@ export const load: PageLoad = async () => {
 			weight: 0.35,
 			category: 'cakes',
 			status: 'On Sale',
-			image: ChocolateCakeAnotherPicture
+			image: ChocolateCake
 		},
 		{
 			id: 2,
@@ -61,11 +61,11 @@ export const load: PageLoad = async () => {
 			weight: 0.37,
 			category: 'cakes',
 			status: 'On Sale',
-			image: CarrotCakePicture
+			image: CarrotCake
 		},
 		{
 			id: 3,
-			name: 'Blueberry Cheesecake',
+			name: 'Cheesecake',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 			price: 340000.0,
@@ -74,7 +74,7 @@ export const load: PageLoad = async () => {
 			weight: 0.33,
 			category: 'cakes',
 			status: 'On Sale',
-			image: CheeseCakePicture
+			image: CheeseCake
 		},
 		{
 			id: 4,
@@ -87,7 +87,7 @@ export const load: PageLoad = async () => {
 			weight: 0.3,
 			category: 'cakes',
 			status: 'On Sale',
-			image: MousseCakePicture
+			image: MousseCake
 		},
 		{
 			id: 5,
@@ -100,11 +100,11 @@ export const load: PageLoad = async () => {
 			weight: 0.35,
 			category: 'cakes',
 			status: 'On Sale',
-			image: RedVelvetCakePicture
+			image: RedVelvetCake
 		},
 		{
 			id: 6,
-			name: 'Sponge Cake',
+			name: 'Lemon Sponge Cake',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 			price: 280000.0,
@@ -113,11 +113,11 @@ export const load: PageLoad = async () => {
 			weight: 0.39,
 			category: 'cakes',
 			status: 'On Sale',
-			image: SpongeCakePicture
+			image: LemonSpongeCake
 		},
 		{
 			id: 7,
-			name: 'Strawberry Cheesecake',
+			name: 'Apple Cake',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 			price: 320000.0,
@@ -126,11 +126,11 @@ export const load: PageLoad = async () => {
 			weight: 0.4,
 			category: 'cakes',
 			status: 'On Sale',
-			image: StrawberryCheesecakePicture
+			image: AppleCake
 		},
 		{
 			id: 8,
-			name: 'Charlotte Cake with Craberries',
+			name: 'Banana Cake',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 			price: 300000.0,
@@ -139,11 +139,11 @@ export const load: PageLoad = async () => {
 			weight: 0.35,
 			category: 'cakes',
 			status: 'On Sale',
-			image: CranberryCharlotteCakePicture
+			image: BananaCake
 		},
 		{
 			id: 9,
-			name: 'Charlotte Cake with Strawberries',
+			name: 'Black Forest Cake',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sapien velit, vel finibus nisl malesuada eu. Cras fringilla, purus sit amet luctus pretium, enim erat euismod elit, quis dignissim ligula nibh quis libero. Vivamus pretium interdum enim eget tempus. Mauris porta consectetur hendrerit. Mauris mollis id odio at pellentesque. Donec at elit id diam mollis tempor et vitae quam. Quisque sollicitudin risus diam. Ut posuere, leo id tincidunt pulvinar, erat diam elementum dolor, vel convallis erat nisi eu nibh. Ut in velit mollis, maximus massa imperdiet, euismod lorem. Donec tristique maximus quam sit amet tristique. Integer pellentesque ligula eget lacus malesuada, at dapibus eros sagittis. Fusce vitae arcu eget nibh congue suscipit. Pellentesque ut maximus ante. Cras condimentum facilisis turpis ac viverra. Vivamus sollicitudin dolor ut nunc varius sagittis.',
 			price: 325000.0,
@@ -152,7 +152,7 @@ export const load: PageLoad = async () => {
 			weight: 0.38,
 			category: 'cakes',
 			status: 'On Sale',
-			image: StrawberryCharlotteCakePicture
+			image: BlackForestCake
 		}
 	];
 

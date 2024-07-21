@@ -7,30 +7,39 @@
 	export let data: PageData;
 </script>
 
-<Section bgColor="bg-lighter-cream" fontFamily="font-lato">
-	<div class="py-12 px-8 max-w-screen-xl">
-		<div class="flex flex-col space-y-12">
+<Section bgColor="bg-lighter-cream" fontFamily="font-lato" responsiveDesign>
+	<div class="py-10 px-6 md:py-12 md:px-8">
+		<div class="flex flex-col items-center space-y-12">
 			<div class="flex flex-col justify-center items-center space-y-2">
-				<h1 class="text-brown-900 text-4xl font-bold uppercase">Cakes</h1>
+				<h1 class="text-brown-900 text-4xl font-bold uppercase text-center">
+					All Products in our Shop
+				</h1>
 				<p class="text-brown-900 text-xl text-center font-normal leading-relaxed">
 					Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras
 					sed dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue
 					lorem. Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
 				</p>
 			</div>
-			<div class="flex flex-row justify-between items-center">
-				<div class="flex flex-row space-x-4">
-					<form action="/search" class="flex-1 w-96 self-center">
+			<div
+				class="w-full flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+			>
+				<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
+					<form action="/search" class="flex-1 w-full md:w-96">
 						<div class="relative">
-							<div class="flex absolute inset-y-0 start-0 items-center ps-3 pointer-events-none">
+							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 								<SearchOutline class="w-4 h-4" />
 							</div>
-							<Input id="search-navbar" color="base" class="ps-10" placeholder="Search cake..." />
+							<Input
+								id="search-navbar"
+								color="base"
+								class="pl-10 w-full"
+								placeholder="Search cake..."
+							/>
 						</div>
 					</form>
-					<Button color="primary" class="text-base font-bold text-gray-50"
-						>Sort By<ChevronDownOutline class="ps-2 text-gray-50" size="lg" /></Button
-					>
+					<Button color="primary" class="text-base font-bold text-gray-50">
+						Sort By<ChevronDownOutline class="pl-2 text-gray-50" size="lg" />
+					</Button>
 					<Dropdown class="w-48 overflow-y-auto py-1 h-48">
 						<DropdownItem class="flex items-center text-base font-normal gap-2">
 							<span>Featured</span>
@@ -50,7 +59,6 @@
 						<DropdownItem class="flex items-center text-base font-normal gap-2">
 							<span>Alphabetically, A-Z</span>
 						</DropdownItem>
-
 						<DropdownItem class="flex items-center text-base font-normal gap-2">
 							<span>Alphabetically, Z-A</span>
 						</DropdownItem>
@@ -85,15 +93,15 @@
 					</button>
 				</div>
 			</div>
-			<div class="grid grid-cols-4 grid-flow-row gap-6">
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
 				{#each data.cakes as cake}
-					<div class="max-w-xs h-full border bg-gray-50 bg-center p-4">
-						<img src={cake.image} alt={cake.name} class="w-64 h-64 object-cover" loading="lazy" />
+					<div class="max-w-full h-full border bg-gray-50 bg-center p-5">
+						<img src={cake.image} alt={cake.name} class="w-full h-64 object-cover" loading="lazy" />
 						<div class="flex flex-col space-y-4 items-start py-2">
 							<div class="flex flex-col space-y-2">
 								<a href={'#'}>
 									<p class="text-lg font-normal tracking-tight text-brown-900">
-										{cake.name} 
+										{cake.name}
 									</p>
 								</a>
 								<p class="text-brown-900 text-xl font-bold">
@@ -103,27 +111,7 @@
 									}).format(cake.price)}
 								</p>
 							</div>
-							<a
-								href={'#'}
-								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
-							>
-								Order Now
-								<svg
-									class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 14 10"
-								>
-									<path
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M1 5h12m0 0L9 1m4 4L9 9"
-									/>
-								</svg>
-							</a>
+							<Button color="primary" class="text-base font-bold text-gray-50">Add to Cart</Button>
 						</div>
 					</div>
 				{/each}

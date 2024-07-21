@@ -1,21 +1,21 @@
 <script lang="ts">
-	import { HeaderBgPicture, CakeDungeonLogo } from '$lib';
+	import { Cakes, CakeDungeonLogo } from '$lib';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		const sidePicture = document.getElementById('side-picture');
 
 		if (sidePicture) {
-			sidePicture.style.backgroundImage = `url(${HeaderBgPicture})`;
+			sidePicture.style.backgroundImage = `url(${Cakes})`;
 		}
 	});
 </script>
 
-<section class="bg-gray-50 font-lato min-h-screen">
-	<div class="flex flex-row h-screen overflow-y-hidden">
+<section class="bg-gray-50 font-lato min-h-screen max-w-full">
+	<div class="grid grid-cols-1 h-full overflow-x-hidden md:grid-cols-2">
 		<div
 			id="side-picture"
-			class="bg-cover bg-center bg-fixed flex w-full justify-center items-center"
+			class="flex bg-cover bg-center bg-fixed min-h-screen justify-center items-center"
 		>
 			<div>
 				<a href={'/'} title="Cake Dungeon Online Store">
@@ -23,20 +23,22 @@
 						id="logo"
 						src={CakeDungeonLogo}
 						alt="cake"
-						class="rounded-full w-[14rem] h-[14rem]"
+						class="rounded-full w-48 h-48 md:w-56 md:h-56"
 					/>
 				</a>
 			</div>
 		</div>
-		<div class="bg-gray-50 py-12 px-8 w-full self-center">
-			<form class="flex flex-col space-y-6">
+		<div class="bg-gray-50 min-h-screen py-16 px-8 w-full flex flex-col justify-center">
+			<form class="flex flex-col space-y-6 max-w-md mx-auto w-full">
 				<div class="flex flex-col space-y-2 items-center">
-					<h1 class="text-dark-cocoa font-bold text-4xl">Sign In to your account</h1>
-					<p class="text-dark-cocoa font-normal text-xl">
-						Or <span class="text-blue-400"><a href="/register">create an account</a></span>
+					<h1 class="text-gray-900 font-semibold text-2xl text-center md:text-3xl">
+						Sign In to your account
+					</h1>
+					<p class="text-gray-900 font-normal text-lg text-center md:text-xl">
+						Or <span class="text-blue-400"><a href={'/register'}>create an account</a></span>
 					</p>
 				</div>
-				<div class="flex items-center border-2 p-2.5 rounded-2xl bg-gray-50">
+				<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5 text-gray-400"
@@ -52,14 +54,15 @@
 						/>
 					</svg>
 					<input
-						class="w-full bg-transparent outline-none border-none px-2"
-						type="text"
+						class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
+						type="email"
 						name="email"
 						id="email"
 						placeholder="Email Address"
+						required
 					/>
 				</div>
-				<div class="flex items-center border-2 p-2.5 rounded-2xl bg-gray-50">
+				<div class="flex items-center border-2 p-2 rounded-2xl bg-gray-50 md:p-2.5">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5 text-gray-400"
@@ -73,23 +76,25 @@
 						/>
 					</svg>
 					<input
-						class="w-full bg-transparent outline-none border-none px-2"
-						type="text"
+						class="w-full text-base bg-transparent outline-none border-none px-2 ms-2"
+						type="password"
 						name="password"
 						id="password"
 						placeholder="Password"
+						required
 					/>
 				</div>
 				<button
 					type="submit"
-					class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-lg font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
-					>Login</button
+					class="w-full bg-cream-500 p-2 rounded-2xl text-gray-50 text-base font-semibold hover:bg-cream-900 transition-all duration-300 ease-in-out"
 				>
+					Login
+				</button>
 				<div class="flex flex-row">
 					<p
-						class="text-base text-brown-900 hover:text-blue-500 underline transition-all duration-300 ease-in-out self-start"
+						class="text-base text-brown-900 hover:text-blue-500 underline transition-all duration-300 ease-in-out"
 					>
-						<a href={'#'}> Forgot Password ? </a>
+						<a href={'#'}>Forgot Password?</a>
 					</p>
 				</div>
 			</form>
