@@ -30,23 +30,21 @@
 	class="bg-auto bg-fixed bg-center font-bodoni min-h-screen max-w-full md:bg-cover"
 >
 	<div class="container mx-auto">
-		<div class="py-14 px-10 max-w-full md:py-24 md:px-20">
-			<div class="flex flex-col items-center space-y-20">
-				<img
-					id="logo"
-					src={CakeDungeonLogo}
-					alt="cake"
-					class="rounded-full w-[10rem] h-[10rem] md:w-[14rem] md:h-[14rem]"
-					loading="lazy"
-				/>
-				<div class="flex flex-col justify-center items-center space-y-4">
-					<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-7xl lg:text-8xl">
-						Cake Dungeon
-					</h1>
-					<p class="text-xl font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl">
-						󠁐#Explore all cakes flavors
-					</p>
-				</div>
+		<div class="flex flex-col space-y-20 py-14 px-10 justify-center items-center md:py-24 md:px-20">
+			<img
+				id="logo"
+				src={CakeDungeonLogo}
+				alt="cake"
+				class="rounded-full w-[10rem] h-[10rem] md:w-[14rem] md:h-[14rem]"
+				loading="lazy"
+			/>
+			<div class="flex flex-col justify-center items-center space-y-4">
+				<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-7xl lg:text-8xl">
+					Cake Dungeon
+				</h1>
+				<p class="text-xl font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl">
+					󠁐#Explore all cakes flavors
+				</p>
 			</div>
 		</div>
 	</div>
@@ -56,7 +54,7 @@
 <!-- Welcome Section -->
 <Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div
-		class="show-on-scroll py-10 px-6 flex flex-col justify-center items-center h-screen space-y-6 md:flex-row md:space-x-10 md:py-12 md:px-8"
+		class="show-on-scroll py-10 px-6 flex flex-col justify-center items-center space-y-6 md:flex-row md:space-x-10 md:py-12 md:px-8"
 	>
 		<div class="flex flex-col items-center space-y-6 p-3 lg:items-start">
 			<h1
@@ -150,7 +148,7 @@
 <!-- Best Cakes Section -->
 <Section bgColor="bg-lighter-cream" fontFamily="font-lato" responsiveDesign>
 	<div
-		class="show-on-scroll py-10 px-6 flex flex-col mx-auto space-y-6 justify-center h-screen carousel md:space-y-10 md:py-12 md:px-8"
+		class="show-on-scroll py-10 px-6 flex flex-col mx-auto space-y-6 justify-center carousel md:space-y-10 md:py-12 md:px-8"
 	>
 		<h1
 			class="text-brown-900 font-bodoni font-bold text-3xl uppercase text-center md:text-4xl lg:text-5xl"
