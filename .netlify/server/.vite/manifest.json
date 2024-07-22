@@ -1,0 +1,313 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
+    ]
+  },
+  "_Cake Dungeon-Logo.js": {
+    "file": "chunks/Cake Dungeon-Logo.js",
+    "name": "Cake Dungeon-Logo",
+    "assets": [
+      "_app/immutable/assets/Cake Dungeon-Logo.DxAuBRw-.png"
+    ]
+  },
+  "_Footer.js": {
+    "file": "chunks/Footer.js",
+    "name": "Footer",
+    "imports": [
+      "_index2.js",
+      "_Cake Dungeon-Logo.js",
+      "_Section.js"
+    ]
+  },
+  "_Red Velvet Cake.js": {
+    "file": "chunks/Red Velvet Cake.js",
+    "name": "Red Velvet Cake",
+    "assets": [
+      "_app/immutable/assets/Apple Cake.DRrs5Xbb.jpg",
+      "_app/immutable/assets/Banana Cake.CuAF7JlK.jpg",
+      "_app/immutable/assets/Birthday Cake.D83v2lPM.jpg",
+      "_app/immutable/assets/Black Forest Cake.B3szfSxB.jpg",
+      "_app/immutable/assets/Carrot Cake.DVsSRpiH.jpg",
+      "_app/immutable/assets/Cheesecake.B09zbqlM.jpg",
+      "_app/immutable/assets/Chocolate Cake.DIaT2-cf.jpg",
+      "_app/immutable/assets/Lemon Sponge Cake.DqIxwwAv.jpg",
+      "_app/immutable/assets/Mousse Cake.DXNjlfdN.jpg",
+      "_app/immutable/assets/Red Velvet Cake.K3IsDZJ1.jpg"
+    ]
+  },
+  "_Section.js": {
+    "file": "chunks/Section.js",
+    "name": "Section",
+    "imports": [
+      "_index2.js",
+      "_misc.js"
+    ]
+  },
+  "_equality.js": {
+    "file": "chunks/equality.js",
+    "name": "equality"
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_index2.js",
+      "_equality.js"
+    ]
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index"
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_equality.js",
+      "_index2.js"
+    ]
+  },
+  "_misc.js": {
+    "file": "chunks/misc.js",
+    "name": "misc"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_exports.js",
+      "_index.js"
+    ]
+  },
+  "src/lib/images/Apple Cake.jpg": {
+    "file": "_app/immutable/assets/Apple Cake.DRrs5Xbb.jpg",
+    "src": "src/lib/images/Apple Cake.jpg"
+  },
+  "src/lib/images/Banana Cake.jpg": {
+    "file": "_app/immutable/assets/Banana Cake.CuAF7JlK.jpg",
+    "src": "src/lib/images/Banana Cake.jpg"
+  },
+  "src/lib/images/Birthday Cake.jpg": {
+    "file": "_app/immutable/assets/Birthday Cake.D83v2lPM.jpg",
+    "src": "src/lib/images/Birthday Cake.jpg"
+  },
+  "src/lib/images/Black Forest Cake.jpg": {
+    "file": "_app/immutable/assets/Black Forest Cake.B3szfSxB.jpg",
+    "src": "src/lib/images/Black Forest Cake.jpg"
+  },
+  "src/lib/images/Cake Dungeon-Logo.png": {
+    "file": "_app/immutable/assets/Cake Dungeon-Logo.DxAuBRw-.png",
+    "src": "src/lib/images/Cake Dungeon-Logo.png"
+  },
+  "src/lib/images/Cake.jpg": {
+    "file": "_app/immutable/assets/Cake.Bvg2Pn9H.jpg",
+    "src": "src/lib/images/Cake.jpg"
+  },
+  "src/lib/images/Cakes.jpg": {
+    "file": "_app/immutable/assets/Cakes.BfQZGWIy.jpg",
+    "src": "src/lib/images/Cakes.jpg"
+  },
+  "src/lib/images/Carrot Cake.jpg": {
+    "file": "_app/immutable/assets/Carrot Cake.DVsSRpiH.jpg",
+    "src": "src/lib/images/Carrot Cake.jpg"
+  },
+  "src/lib/images/Cheesecake.jpg": {
+    "file": "_app/immutable/assets/Cheesecake.B09zbqlM.jpg",
+    "src": "src/lib/images/Cheesecake.jpg"
+  },
+  "src/lib/images/Chocolate Cake.jpg": {
+    "file": "_app/immutable/assets/Chocolate Cake.DIaT2-cf.jpg",
+    "src": "src/lib/images/Chocolate Cake.jpg"
+  },
+  "src/lib/images/Cookies.jpg": {
+    "file": "_app/immutable/assets/Cookies.kXlxkXUr.jpg",
+    "src": "src/lib/images/Cookies.jpg"
+  },
+  "src/lib/images/Ice Cream.jpg": {
+    "file": "_app/immutable/assets/Ice Cream.CtyQLLe2.jpg",
+    "src": "src/lib/images/Ice Cream.jpg"
+  },
+  "src/lib/images/Lemon Sponge Cake.jpg": {
+    "file": "_app/immutable/assets/Lemon Sponge Cake.DqIxwwAv.jpg",
+    "src": "src/lib/images/Lemon Sponge Cake.jpg"
+  },
+  "src/lib/images/Mousse Cake.jpg": {
+    "file": "_app/immutable/assets/Mousse Cake.DXNjlfdN.jpg",
+    "src": "src/lib/images/Mousse Cake.jpg"
+  },
+  "src/lib/images/Orange Cake.jpg": {
+    "file": "_app/immutable/assets/Orange Cake.DdkELNqN.jpg",
+    "src": "src/lib/images/Orange Cake.jpg"
+  },
+  "src/lib/images/Red Velvet Cake.jpg": {
+    "file": "_app/immutable/assets/Red Velvet Cake.K3IsDZJ1.jpg",
+    "src": "src/lib/images/Red Velvet Cake.jpg"
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "name": "entries/pages/_error.svelte",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_exports.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_misc.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.7HdsDVvD.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Footer.js",
+      "_Cake Dungeon-Logo.js",
+      "_Section.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/Cake.Bvg2Pn9H.jpg"
+    ]
+  },
+  "src/routes/+page.ts": {
+    "file": "entries/pages/_page.ts.js",
+    "name": "entries/pages/_page.ts",
+    "src": "src/routes/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_Red Velvet Cake.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/Cookies.kXlxkXUr.jpg",
+      "_app/immutable/assets/Ice Cream.CtyQLLe2.jpg"
+    ]
+  },
+  "src/routes/about/+layout.svelte": {
+    "file": "entries/pages/about/_layout.svelte.js",
+    "name": "entries/pages/about/_layout.svelte",
+    "src": "src/routes/about/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Footer.js",
+      "_misc.js"
+    ]
+  },
+  "src/routes/about/+page.svelte": {
+    "file": "entries/pages/about/_page.svelte.js",
+    "name": "entries/pages/about/_page.svelte",
+    "src": "src/routes/about/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Section.js",
+      "_Cake Dungeon-Logo.js"
+    ]
+  },
+  "src/routes/articles/+layout.svelte": {
+    "file": "entries/pages/articles/_layout.svelte.js",
+    "name": "entries/pages/articles/_layout.svelte",
+    "src": "src/routes/articles/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Footer.js",
+      "_misc.js"
+    ]
+  },
+  "src/routes/articles/+page.svelte": {
+    "file": "entries/pages/articles/_page.svelte.js",
+    "name": "entries/pages/articles/_page.svelte",
+    "src": "src/routes/articles/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Section.js"
+    ]
+  },
+  "src/routes/articles/+page.ts": {
+    "file": "entries/pages/articles/_page.ts.js",
+    "name": "entries/pages/articles/_page.ts",
+    "src": "src/routes/articles/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/login/+page.svelte": {
+    "file": "entries/pages/login/_page.svelte.js",
+    "name": "entries/pages/login/_page.svelte",
+    "src": "src/routes/login/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Cake Dungeon-Logo.js"
+    ]
+  },
+  "src/routes/register/+page.svelte": {
+    "file": "entries/pages/register/_page.svelte.js",
+    "name": "entries/pages/register/_page.svelte",
+    "src": "src/routes/register/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Cake Dungeon-Logo.js"
+    ]
+  },
+  "src/routes/shop/+layout.svelte": {
+    "file": "entries/pages/shop/_layout.svelte.js",
+    "name": "entries/pages/shop/_layout.svelte",
+    "src": "src/routes/shop/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Footer.js",
+      "_misc.js"
+    ]
+  },
+  "src/routes/shop/+page.svelte": {
+    "file": "entries/pages/shop/_page.svelte.js",
+    "name": "entries/pages/shop/_page.svelte",
+    "src": "src/routes/shop/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_Section.js",
+      "_misc.js",
+      "_index.js"
+    ]
+  },
+  "src/routes/shop/+page.ts": {
+    "file": "entries/pages/shop/_page.ts.js",
+    "name": "entries/pages/shop/_page.ts",
+    "src": "src/routes/shop/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_Red Velvet Cake.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/Orange Cake.DdkELNqN.jpg"
+    ]
+  }
+}
