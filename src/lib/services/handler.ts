@@ -101,3 +101,11 @@ export function fadeInScrollAnimation(targets: NodeListOf<Element>, animation: s
 		observer.observe(target);
 	});
 }
+
+export function truncateAtLastSpace(text: string, length: number, ending: string = '...') {
+	if (text.length <= length) return text;
+	const trimmedString = text.slice(0, length + 1);
+	return (
+		trimmedString.slice(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(' '))) + ending
+	);
+}

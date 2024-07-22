@@ -1,10 +1,49 @@
 <script lang="ts">
 	import Section from '$lib/components/Section.svelte';
-	import { Button, Dropdown, DropdownItem, Input, Badge } from 'flowbite-svelte';
+	import { Button, Dropdown, DropdownItem, Input } from 'flowbite-svelte';
 	import { ChevronDownOutline, SearchOutline } from 'flowbite-svelte-icons';
 	import type { PageData } from './$types';
+	import { browser } from '$app/environment';
 
 	export let data: PageData;
+
+	let defaultItemsClass =
+		'grid grid-cols-1 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full';
+	let defaultCardClass = 'flex flex-col items-start bg-gray-50 border border-gray-200';
+	let defaultCardImageClass = 'w-full h-64 object-cover p-2.5';
+
+	const viewAsList = () => {
+		defaultItemsClass = 'grid grid-cols-1 grid-flow-row gap-6 w-full';
+		defaultCardClass = 'flex flex-row items-center bg-gray-50 border border-gray-200';
+		defaultCardImageClass = 'w-56 h-auto object-cover p-2.5';
+
+		if (browser) {
+			let listViewBtn = document.getElementById('list-view-btn');
+			let gridViewBtn = document.getElementById('grid-view-btn');
+
+			listViewBtn?.classList.remove('text-gray-300');
+			listViewBtn?.classList.add('text-cream-700');
+			gridViewBtn?.classList.remove('text-cream-700');
+			gridViewBtn?.classList.add('text-gray-300');
+		}
+	};
+
+	const viewAsGrid = () => {
+		defaultItemsClass =
+			'grid grid-cols-1 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full';
+		defaultCardClass = 'flex flex-col items-start bg-gray-50 border border-gray-200';
+		defaultCardImageClass = 'w-full h-64 object-cover p-2.5';
+
+		if (browser) {
+			let listViewBtn = document.getElementById('list-view-btn');
+			let gridViewBtn = document.getElementById('grid-view-btn');
+
+			gridViewBtn?.classList.remove('text-gray-300');
+			gridViewBtn?.classList.add('text-cream-700');
+			listViewBtn?.classList.remove('text-cream-700');
+			listViewBtn?.classList.add('text-gray-300');
+		}
+	};
 </script>
 
 <Section bgColor="bg-lighter-cream" fontFamily="font-lato" responsiveDesign>
@@ -16,9 +55,9 @@
 			<p
 				class="text-brown-900 text-base text-center font-normal leading-relaxed md:text-lg lg:text-xl"
 			>
-				Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras
-				sed dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue
-				lorem. Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
+				Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras sed
+				dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue lorem.
+				Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
 			</p>
 		</div>
 		<div
@@ -67,11 +106,15 @@
 			</div>
 			<div class="hidden md:flex md:flex-row md:space-x-4">
 				<span class="text-gray-900 text-base font-semibold">View As</span>
-				<button class="active:bg-cream-700 focus:outline-none focus:ring focus:ring-cream-300">
+				<button
+					on:click={viewAsList}
+					id="list-view-btn"
+					class="outline-none text-gray-300 focus:outline-none focus:ring-0 focus:text-cream-700 transition-all duration-300 ease-in-out"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-list-ul w-6 h-6 self-center text-gray-400"
+						class="bi bi-list-ul w-6 h-6 self-center"
 						viewBox="0 0 16 16"
 					>
 						<path
@@ -80,11 +123,15 @@
 						/>
 					</svg>
 				</button>
-				<button class="active:bg-cream-700 focus:outline-none focus:ring focus:ring-cream-300">
+				<button
+					on:click={viewAsGrid}
+					id="grid-view-btn"
+					class="outline-none text-gray-300 focus:outline-none focus:ring-0 focus:text-cream-700 transition-all duration-300 ease-in-out"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						class="bi bi-grid w-6 h-6 self-center text-gray-400"
+						class="bi bi-grid w-6 h-6 self-center"
 						viewBox="0 0 16 16"
 					>
 						<path
@@ -94,12 +141,12 @@
 				</button>
 			</div>
 		</div>
-		<div class="grid grid-cols-1 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+		<div class={defaultItemsClass}>
 			{#each data.cakes as cake}
-				<div class="max-w-full h-full border bg-gray-50 bg-center p-5">
-					<img src={cake.image} alt={cake.name} class="w-full h-64 object-cover" loading="lazy" />
-					<div class="flex flex-col space-y-4 items-start py-2">
-						<div class="flex flex-col space-y-2">
+				<div class={defaultCardClass}>
+					<img src={cake.image} alt={cake.name} class={defaultCardImageClass} loading="lazy" />
+					<div class="flex flex-col leading-normal p-3 space-y-4">
+						<div class="flex flex-col space-y-2 w-full">
 							<a href={'#'}>
 								<p class="text-lg font-normal tracking-tight text-brown-900">
 									{cake.name}
@@ -112,7 +159,9 @@
 								}).format(cake.price)}
 							</p>
 						</div>
-						<Button color="primary" class="text-base font-bold text-gray-50">Add to Cart</Button>
+						<button class="bg-cream-700 text-gray-50 text-base font-bold rounded-lg p-2 w-6.12">
+							Add to Cart
+						</button>
 					</div>
 				</div>
 			{/each}

@@ -45,7 +45,7 @@
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor"
-								class="bi bi-arrow-right-circle-fill w-5 h-5 text-cream-900"
+								class="bi bi-arrow-right-circle-fill w-6 h-6 text-cream-900"
 								viewBox="0 0 16 16"
 							>
 								<path
@@ -54,7 +54,7 @@
 							</svg>
 							<a
 								href={'#'}
-								class="w-full text-base font-normal rounded-full hover:bg-brown-600 transition-all duration-300 ease-in-out"
+								class="w-full text-base font-normal bg-transparent rounded-full hover:bg-brown-600 transition-all duration-300 ease-in-out"
 							>
 								<span class="font-bodoni text-gray-900 text-lg text-center"
 									>Read more about <span class="font-bold">{category.name}</span></span

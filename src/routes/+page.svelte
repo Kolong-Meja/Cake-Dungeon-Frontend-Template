@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { CakeDungeonLogo, Cakes, Cake, Footer, NavBar } from '$lib';
 	import Section from '$lib/components/Section.svelte';
-	import { carouselSlider, fadeInScrollAnimation } from '$lib/services/animation';
+	import { carouselSlider, fadeInScrollAnimation } from '$lib/services/handler';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 

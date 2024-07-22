@@ -2,7 +2,7 @@
 
 <script lang="ts">
 	import { CakeDungeonLogo } from '$lib';
-	import { navigationScrollTransition } from '$lib/services/animation';
+	import { navigationScrollTransition } from '$lib/services/handler';
 	import { onMount } from 'svelte';
 	import { pages } from '$lib/services/nav-links';
 	
