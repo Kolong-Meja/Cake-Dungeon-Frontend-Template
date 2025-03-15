@@ -12,12 +12,9 @@
 				Articles
 			</h1>
 			<p
-				class="text-gray-900 text-base text-center font-normal leading-relaxed md:text-lg lg:text-xl"
+				class="text-gray-900 text-base text-center font-mulish font-normal leading-relaxed md:text-lg lg:text-xl"
 			>
-				Fusce commodo nunc ut metus luctus scelerisque. Donec lacus ligula, blandit non pellentesque
-				vitae, tincidunt a nisl. Aenean a fringilla ipsum. Nullam nunc augue, varius vel tellus ut,
-				sollicitudin semper nunc. Etiam libero leo, condimentum a tincidunt ac, fringilla nec purus.
-				Pellentesque scelerisque dui et urna dictum dictum. Class aptent.
+				Browse hundreds of articles that we provide for you to read.
 			</p>
 		</div>
 		<div class="flex flex-col space-y-8 w-full items-start md:space-y-10 lg:space-y-12">
@@ -26,7 +23,9 @@
 			</h1>
 			<div class="grid grid-cols-1 grid-flow-row gap-4 w-full sm:grid-cols-2 sm:gap-5 md:gap-6">
 				{#each data.categories as category}
-					<div class="flex flex-col space-y-4 h-full border-b border-b-cream-600 pb-3 sm:border-0 sm:pb-0">
+					<div
+						class="flex flex-col space-y-4 h-full border-b border-b-cream-600 pb-3 sm:border-0 sm:pb-0"
+					>
 						<h1 class="text-lg font-semibold uppercase text-gray-900 md:text-xl lg:text-2xl">
 							{category.name}
 						</h1>

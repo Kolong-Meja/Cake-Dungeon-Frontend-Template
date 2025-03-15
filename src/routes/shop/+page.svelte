@@ -53,11 +53,9 @@
 				All Products in our Shop
 			</h1>
 			<p
-				class="text-brown-900 text-base text-center font-normal leading-relaxed md:text-lg lg:text-xl"
+				class="text-brown-900 text-base text-center font-mulish font-normal leading-relaxed md:text-lg lg:text-xl"
 			>
-				Integer cursus molestie neque vel commodo. Maecenas a pulvinar erat, nec dictum mi. Cras sed
-				dolor finibus, imperdiet odio sed, molestie nunc. Morbi vel tincidunt magna, a congue lorem.
-				Phasellus accumsan turpis vitae mi rutrum lobortis. Mauris faucibus fringilla enim
+				We provide hundreds of the most delicious cake variants that will make you happy.
 			</p>
 		</div>
 		<div
@@ -106,6 +104,7 @@
 			</div>
 			<div class="hidden md:flex md:flex-row md:space-x-4">
 				<span class="text-gray-900 text-base font-semibold">View As</span>
+				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<button
 					on:click={viewAsList}
 					id="list-view-btn"
@@ -123,6 +122,7 @@
 						/>
 					</svg>
 				</button>
+				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<button
 					on:click={viewAsGrid}
 					id="grid-view-btn"

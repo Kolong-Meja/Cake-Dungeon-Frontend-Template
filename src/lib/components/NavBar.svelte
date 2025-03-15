@@ -5,7 +5,7 @@
 	import { navigationScrollTransition } from '$lib/services/handler';
 	import { onMount } from 'svelte';
 	import { pages } from '$lib/services/nav-links';
-	
+
 	onMount(() => {
 		const mobileMenuBtn = document.getElementById('mobile-menu-button');
 		const mobileMenu = document.getElementById('mobile-menu');
@@ -21,19 +21,21 @@
 
 <nav id="navbar" class="bg-cream-500 z-10 w-full">
 	<div class="flex justify-between p-5 mx-3">
-		<a
-			href={'/'}
-		>
-			<img
-				id="logo"
-				src={CakeDungeonLogo}
-				alt="Faisal Logo"
-				title="Cake Dungeon Online Store"
-				class="rounded-full w-10 h-10"
-			/>
-		</a>
+		<div class="flex flex-row space-x-4 items-center">
+			<a href={'/'}>
+				<img
+					id="logo"
+					src={CakeDungeonLogo}
+					alt="Faisal Logo"
+					title="Cake Dungeon Online Store"
+					class="rounded-full w-10 h-10"
+				/>
+			</a>
+			<p class="font-mulish font-normal text-gray-50 text-xl">Cake Dungeon</p>
+		</div>
 		<!-- Mobile menu button -->
 		<div class="block self-center lg:hidden">
+			<!-- svelte-ignore a11y_consider_explicit_label -->
 			<button
 				id="mobile-menu-button"
 				class="text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-50"
@@ -59,7 +61,7 @@
 				<li class="list-none self-center">
 					<a href={`${link.url}`} class="link">
 						<span
-							class="nav-text font-bodoni font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
+							class="nav-text font-mulish font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
 							title={link.title}>{link.title}</span
 						>
 					</a>
@@ -74,7 +76,7 @@
 				<li class="list-none">
 					<a href={`${link.url}`} class="link">
 						<span
-							class="nav-text font-bodoni font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
+							class="nav-text font-mulish font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
 							title={link.title}>{link.title}</span
 						>
 					</a>

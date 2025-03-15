@@ -15,7 +15,7 @@
 				About Cake Dungeon Online Store
 			</h1>
 			<p
-				class="text-lg text-brown-900 font-normal leading-relaxed text-start md:text-xl md:text-center lg:text-start"
+				class="text-lg text-brown-900 font-mulish font-normal leading-relaxed text-start md:text-xl md:text-center lg:text-start"
 			>
 				The Cake Dungeon Online Store, established in 2024, is a fusion of advanced technology and
 				user-friendly accessibility, designed to cater to the diverse tastes of cake and dessert

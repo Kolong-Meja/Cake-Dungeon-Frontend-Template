@@ -86,7 +86,8 @@ export default {
 		},
 		fontFamily: {
 			bodoni: ['Libre Bodoni', 'serif'],
-			lato: ['Lato', 'sans-serif']
+			lato: ['Lato', 'sans-serif'],
+			mulish: ['Mulish', 'sans-serif']
 		},
 		animation: {
 			fadeIn: 'fadeIn 1s ease-in forwards',

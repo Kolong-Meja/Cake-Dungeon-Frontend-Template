@@ -42,7 +42,9 @@
 				<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-7xl lg:text-8xl">
 					Cake Dungeon
 				</h1>
-				<p class="text-xl font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl">
+				<p
+					class="text-xl font-mulish font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl"
+				>
 					󠁐#Explore all cakes flavors
 				</p>
 			</div>
@@ -63,7 +65,7 @@
 				Welcome to cake dungeon
 			</h1>
 			<p
-				class="text-xl font-normal leading-relaxed text-center text-brown-900 md:text-2xl lg:text-start"
+				class="text-xl font-mulish font-light leading-relaxed text-center text-brown-900 md:text-2xl lg:text-start"
 			>
 				Indulge in a delightful journey where every bite is an experience to savor. Welcome to a
 				haven for cake enthusiasts, where exquisite flavors and delectable treats await you. Meet a
@@ -72,10 +74,27 @@
 				journey and stay blissfully satisfied.
 			</p>
 			<a
-				href={'#'}
-				class="p-2.5 text-xs font-medium text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-sm md:p-3"
+				href={'#categories'}
+				class="p-2.5 text-sm font-normal text-white bg-brown-400 rounded-full hover:bg-brown-600 focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out md:rounded-lg md:text-base md:p-3"
 			>
-				<span class="font-bodoni text-gray-50 text-lg text-center">Start Explore</span>
+				<span class="inline-flex items-center"
+					>Start Explore
+					<svg
+						class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 14 10"
+					>
+						<path
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M1 5h12m0 0L9 1m4 4L9 9"
+						/>
+					</svg></span
+				>
 			</a>
 		</div>
 		<img
@@ -92,6 +111,7 @@
 <!-- Categories Section -->
 <Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div
+		id="categories"
 		class="show-on-scroll flex flex-col justify-center items-center py-10 px-6 space-y-8 md:space-y-12 md:py-12 md:px-8 lg:space-y-16"
 	>
 		<h1 class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl">
@@ -111,7 +131,7 @@
 								{category.title}
 							</h5>
 						</a>
-						<p class="mb-3 font-normal text-brown-900">
+						<p class="mb-3 font-mulish font-normal text-brown-900">
 							Cake Dungeon offers <span class="font-bold underline">{category.title}</span> variants
 							that are unique and delicious to your taste buds. What are you waiting for? Come on, order
 							now!
