@@ -19,26 +19,30 @@
 	});
 </script>
 
-<nav id="navbar" class="bg-cream-500 z-10 w-full">
-	<div class="flex justify-between p-5 mx-3">
-		<div class="flex flex-row space-x-4 items-center">
-			<a href={'/'}>
+<nav
+	id="navbar"
+	class="z-50 w-full shadow-md bg-gradient-to-r from-brown-900 via-brown-800 to-brown-900"
+>
+	<div class="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+		<div class="flex flex-row items-center space-x-3">
+			<a href={'/'} class="shrink-0">
 				<img
 					id="logo"
 					src={CakeDungeonLogo}
-					alt="Faisal Logo"
+					alt="Cake Dungeon logo"
 					title="Cake Dungeon Online Store"
-					class="rounded-full w-10 h-10"
+					class="w-10 h-10 transition-transform duration-300 ease-in-out rounded-full ring-2 ring-cream-300/70 hover:rotate-3 hover:scale-105"
 				/>
 			</a>
-			<p class="font-mulish font-normal text-gray-50 text-xl">Cake Dungeon</p>
+			<p class="text-lg italic font-semibold font-bodoni text-cream-50 sm:text-2xl">Cake Dungeon</p>
 		</div>
+
 		<!-- Mobile menu button -->
-		<div class="block self-center lg:hidden">
-			<!-- svelte-ignore a11y_consider_explicit_label -->
+		<div class="self-center block lg:hidden">
 			<button
 				id="mobile-menu-button"
-				class="text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-50"
+				aria-label="Toggle navigation menu"
+				class="p-2 transition-colors duration-300 ease-in-out rounded-full text-cream-50 hover:bg-brown-700/60 focus:outline-none focus:ring-2 focus:ring-cream-300"
 			>
 				<svg
 					class="w-6 h-6"
@@ -56,12 +60,13 @@
 				</svg>
 			</button>
 		</div>
-		<ul class="hidden lg:flex space-x-6">
+
+		<ul class="hidden lg:flex lg:items-center lg:space-x-8">
 			{#each pages.links as link}
-				<li class="list-none self-center">
+				<li class="list-none">
 					<a href={`${link.url}`} class="link">
 						<span
-							class="nav-text font-mulish font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
+							class="nav-text bg-gradient-to-r from-cream-300 to-cream-300 bg-left-bottom bg-[length:0%_2px] bg-no-repeat pb-1 font-mulish text-base font-semibold text-cream-50 transition-[background-size,color] duration-300 ease-in-out hover:bg-[length:100%_2px] hover:text-cream-200"
 							title={link.title}>{link.title}</span
 						>
 					</a>
@@ -69,14 +74,15 @@
 			{/each}
 		</ul>
 	</div>
+
 	<!-- Mobile menu -->
-	<div id="mobile-menu" class="lg:hidden">
-		<ul class="flex flex-col space-y-4 p-5">
+	<div id="mobile-menu" class="hidden border-t border-brown-700/60 lg:hidden">
+		<ul class="flex flex-col px-4 py-4 space-y-1">
 			{#each pages.links as link}
 				<li class="list-none">
-					<a href={`${link.url}`} class="link">
+					<a href={`${link.url}`} class="block link">
 						<span
-							class="nav-text font-mulish font-semibold text-md text-gray-50 hover:text-brown-700 transition-all duration-300 ease-in-out"
+							class="nav-text block rounded-xl px-3 py-2.5 font-mulish text-base font-semibold text-cream-50 transition-colors duration-300 ease-in-out hover:bg-brown-700/60 hover:text-cream-200"
 							title={link.title}>{link.title}</span
 						>
 					</a>
