@@ -8,13 +8,8 @@
 	export let data: PageData;
 
 	onMount(() => {
-		const header = document.getElementById('header');
 		const carousels = document.querySelectorAll('.carousel');
 		const targets = document.querySelectorAll('.show-on-scroll');
-
-		if (header) {
-			header.style.backgroundImage = `url(${Cakes})`;
-		}
 
 		carouselSlider(carousels);
 		fadeInScrollAnimation(targets, 'animate-fadeIn');
@@ -27,45 +22,92 @@
 <!-- Header Section -->
 <header
 	id="header"
-	class="bg-auto bg-fixed bg-center font-bodoni min-h-screen max-w-full md:bg-cover"
+	class="relative flex flex-col max-w-full min-h-screen overflow-hidden font-bodoni"
 >
-	<div class="container mx-auto">
-		<div class="flex flex-col space-y-20 py-14 px-10 justify-center items-center md:py-24 md:px-20">
+	<!-- Background photo -->
+	<div
+		class="absolute inset-0 bg-center bg-cover"
+		style="background-image: url({Cakes});"
+		aria-hidden="true"
+	></div>
+
+	<!-- Dark scrim so the logo/text stay legible over any part of the photo -->
+	<div
+		class="absolute inset-0 pointer-events-none bg-gradient-to-b from-brown-900/70 via-brown-900/50 to-brown-900/80"
+		aria-hidden="true"
+	></div>
+
+	<!-- Decorative "sprinkle dots" strip along the bottom edge, echoes the Footer -->
+	<div
+		class="pointer-events-none absolute inset-x-0 bottom-0 h-2 bg-[radial-gradient(circle,#EAD8C0_1.5px,transparent_1.5px)] bg-[length:16px_16px]"
+		aria-hidden="true"
+	></div>
+
+	<div class="container relative z-10 flex items-center justify-center flex-1 mx-auto">
+		<div
+			class="flex flex-col items-center justify-center px-6 space-y-8 py-14 sm:space-y-12 md:space-y-20 md:py-24 md:px-20"
+		>
 			<img
 				id="logo"
 				src={CakeDungeonLogo}
-				alt="cake"
-				class="rounded-full w-[10rem] h-[10rem] md:w-[14rem] md:h-[14rem]"
-				loading="lazy"
+				alt="Cake Dungeon logo"
+				fetchpriority="high"
+				class="h-24 w-24 animate-fadeInDown rounded-full shadow-lg ring-4 ring-cream-50/30 sm:h-32 sm:w-32 md:h-[14rem] md:w-[14rem]"
 			/>
-			<div class="flex flex-col justify-center items-center space-y-4">
-				<h1 class=" text-6xl font-bold text-gray-50 text-center md:text-7xl lg:text-8xl">
+			<div
+				class="flex animate-fadeInDown flex-col items-center justify-center space-y-4 [animation-delay:150ms]"
+			>
+				<h1
+					class="text-4xl font-bold text-center text-cream-50 drop-shadow-lg sm:text-5xl md:text-7xl lg:text-8xl"
+				>
 					Cake Dungeon
 				</h1>
 				<p
-					class="text-xl font-mulish font-semibold text-gray-50 text-center md:text-2xl lg:text-3xl"
+					class="text-lg font-semibold text-center font-mulish text-cream-100 drop-shadow-md sm:text-xl md:text-2xl lg:text-3xl"
 				>
-					󠁐#Explore all cakes flavors
+					#Explore all cakes flavors
 				</p>
 			</div>
 		</div>
 	</div>
+
+	<!-- Scroll cue, reuses the #categories anchor the "Start Explore" button below already targets -->
+	<a
+		href={'#categories'}
+		aria-label="Scroll to categories"
+		class="relative z-10 flex justify-center mb-8 transition-colors duration-300 ease-in-out animate-bounce text-cream-50 hover:text-cream-200"
+	>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="w-8 h-8"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M19 14l-7 7m0 0l-7-7m7 7V3"
+			/>
+		</svg>
+	</a>
 </header>
 <!-- End of Header Section -->
 
 <!-- Welcome Section -->
 <Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div
-		class="show-on-scroll py-10 px-6 flex flex-col justify-center items-center space-y-6 md:flex-row md:space-x-10 md:py-12 md:px-8"
+		class="flex flex-col items-center justify-center px-6 py-10 space-y-6 show-on-scroll md:flex-row md:space-x-10 md:py-12 md:px-8"
 	>
-		<div class="flex flex-col items-center space-y-6 p-3 lg:items-start">
+		<div class="flex flex-col items-center p-3 space-y-6 lg:items-start">
 			<h1
-				class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl lg:text-start"
+				class="text-3xl font-bold text-center uppercase text-brown-900 md:text-4xl lg:text-5xl lg:text-start"
 			>
 				Welcome to cake dungeon
 			</h1>
 			<p
-				class="text-xl font-mulish font-light leading-relaxed text-center text-brown-900 md:text-2xl lg:text-start"
+				class="text-xl font-light leading-relaxed text-center font-mulish text-brown-900 md:text-2xl lg:text-start"
 			>
 				Indulge in a delightful journey where every bite is an experience to savor. Welcome to a
 				haven for cake enthusiasts, where exquisite flavors and delectable treats await you. Meet a
@@ -104,7 +146,7 @@
 			loading="lazy"
 		/>
 	</div>
-	<div class="show-on-scroll py-10 px-6 md:py-12 md:px-8"></div>
+	<div class="px-6 py-10 show-on-scroll md:py-12 md:px-8"></div>
 </Section>
 <!-- End of Welcome Section -->
 
@@ -112,33 +154,32 @@
 <Section bgColor="bg-lighter-cream" responsiveDesign>
 	<div
 		id="categories"
-		class="show-on-scroll flex flex-col justify-center items-center py-10 px-6 space-y-8 md:space-y-12 md:py-12 md:px-8 lg:space-y-16"
+		class="flex flex-col items-center justify-center px-6 py-10 space-y-8 show-on-scroll md:space-y-12 md:py-12 md:px-8 lg:space-y-16"
 	>
-		<h1 class="text-3xl font-bold text-brown-900 uppercase text-center md:text-4xl lg:text-5xl">
+		<h1 class="text-3xl font-bold text-center uppercase text-brown-900 md:text-4xl lg:text-5xl">
 			Categories choices
 		</h1>
 		<div
-			class="grid grid-rows-3 grid-flow-col gap-4 md:gap-6 lg:gap-8 lg:grid-rows-1 lg:grid-cols-3 lg:grid-flow-row"
+			class="grid grid-flow-col grid-rows-3 gap-4 md:gap-6 lg:gap-8 lg:grid-rows-1 lg:grid-cols-3 lg:grid-flow-row"
 		>
 			{#each data.categories as category}
-				<div class="max-w-xs h-full bg-brown-50 bg-center border-0 rounded-lg md:max-w-md">
+				<div class="h-full max-w-xs bg-center border-0 rounded-lg bg-brown-50 md:max-w-md">
 					<img src={category.image} alt={category.name} loading="lazy" />
 					<div class="p-5">
 						<a href={'#'}>
 							<h5
-								class="mb-2 text-lg font-bold tracking-tight text-brown-900 uppercase md:text-xl lg:text-2xl"
+								class="mb-2 text-lg font-bold tracking-tight uppercase text-brown-900 md:text-xl lg:text-2xl"
 							>
 								{category.title}
 							</h5>
 						</a>
-						<p class="mb-3 font-mulish font-normal text-brown-900">
-							Cake Dungeon offers <span class="font-bold underline">{category.title}</span> variants
-							that are unique and delicious to your taste buds. What are you waiting for? Come on, order
-							now!
+						<p class="mb-3 font-normal font-mulish text-brown-900">
+							Cake Dungeon offers <span class="font-bold underline">{category.title}</span> variants that
+							are unique and delicious to your taste buds. What are you waiting for? Come on, order now!
 						</p>
 						<a
 							href={'#'}
-							class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-brown-50 bg-brown-400 rounded-lg hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400 transition-all duration-300 ease-in-out"
+							class="inline-flex items-center px-3 py-2 text-sm font-medium text-center transition-all duration-300 ease-in-out rounded-lg text-brown-50 bg-brown-400 hover:bg-cocoa focus:ring-4 focus:outline-none focus:ring-brown-400"
 						>
 							Order Now
 							<svg
@@ -168,10 +209,10 @@
 <!-- Best Cakes Section -->
 <Section bgColor="bg-lighter-cream" fontFamily="font-lato" responsiveDesign>
 	<div
-		class="show-on-scroll py-10 px-6 flex flex-col mx-auto space-y-6 justify-center carousel md:space-y-10 md:py-12 md:px-8"
+		class="flex flex-col justify-center px-6 py-10 mx-auto space-y-6 show-on-scroll carousel md:space-y-10 md:py-12 md:px-8"
 	>
 		<h1
-			class="text-brown-900 font-bodoni font-bold text-3xl uppercase text-center md:text-4xl lg:text-5xl"
+			class="text-3xl font-bold text-center uppercase text-brown-900 font-bodoni md:text-4xl lg:text-5xl"
 		>
 			Our Best Cakes
 		</h1>
@@ -188,10 +229,10 @@
 					/>
 				</svg>
 			</div>
-			<div class="flex flex-row max-w-full h-full rounded-lg overflow-x-hidden carousel-viewport">
+			<div class="flex flex-row h-full max-w-full overflow-x-hidden rounded-lg carousel-viewport">
 				{#each data.cakes as cake}
 					<div
-						class="flex flex-col justify-center items-center w-full p-2 gap-2 shrink-0 text-center md:w-6/12 md:p-3 md:gap-3 lg:w-4/12 lg:p-4 lg:gap-4"
+						class="flex flex-col items-center justify-center w-full gap-2 p-2 text-center shrink-0 md:w-6/12 md:p-3 md:gap-3 lg:w-4/12 lg:p-4 lg:gap-4"
 					>
 						<img
 							src={cake.image}
