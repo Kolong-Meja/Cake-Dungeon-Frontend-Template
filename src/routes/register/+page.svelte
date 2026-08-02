@@ -18,31 +18,33 @@
 	></div>
 
 	<div class="flex flex-col md:flex-row">
-		<div
-			class="relative flex h-56 w-full items-center justify-center overflow-hidden rounded-b-[3rem] bg-cover bg-center sm:h-64 md:sticky md:top-0 md:h-screen md:rounded-b-none md:rounded-r-[6rem]"
-			style="background-image: url({Cakes});"
-		>
+		<div class="w-full md:w-1/2">
 			<div
-				class="absolute inset-0 pointer-events-none bg-gradient-to-t from-brown-900/75 via-brown-900/15 to-transparent"
-				aria-hidden="true"
-			></div>
-			<div class="relative z-10 flex flex-col items-center gap-3 px-6 text-center">
-				<a href={'/'} title="Cake Dungeon Online Store">
-					<img
-						src={CakeDungeonLogo}
-						alt="Cake Dungeon logo"
-						class="w-20 h-20 border-4 rounded-full shadow-lg border-lighter-cream sm:h-24 sm:w-24 md:h-40 md:w-40"
-					/>
-				</a>
-				<p class="hidden text-lg italic font-bodoni text-cream-50 md:block md:text-xl">
-					Join our sweet family and start ordering.
-				</p>
+				class="relative flex h-56 w-full items-center justify-center overflow-hidden rounded-b-[3rem] bg-cover bg-center sm:h-64 md:sticky md:top-0 md:h-screen md:rounded-b-none md:rounded-r-[6rem]"
+				style="background-image: url({Cakes});"
+			>
+				<div
+					class="absolute inset-0 pointer-events-none bg-gradient-to-t from-brown-900/75 via-brown-900/15 to-transparent"
+					aria-hidden="true"
+				></div>
+				<div class="relative z-10 flex flex-col items-center gap-3 px-6 text-center">
+					<a href={'/'} title="Cake Dungeon Online Store">
+						<img
+							src={CakeDungeonLogo}
+							alt="Cake Dungeon logo"
+							class="w-20 h-20 border-4 rounded-full shadow-lg border-lighter-cream sm:h-24 sm:w-24 md:h-40 md:w-40"
+						/>
+					</a>
+					<p class="hidden text-lg italic font-bodoni text-cream-50 md:block md:text-xl">
+						Join our sweet family and start ordering.
+					</p>
+				</div>
 			</div>
 		</div>
 
 		<!-- Form panel -->
 		<div
-			class="flex flex-col justify-center w-full min-h-screen px-6 py-10 sm:px-10 md:overflow-y-auto md:py-16"
+			class="flex flex-col justify-center w-full min-h-screen px-6 py-10 sm:px-10 md:w-1/2 md:overflow-y-auto md:py-16"
 		>
 			<div class="flex flex-col w-full max-w-md mx-auto space-y-6 animate-fadeIn">
 				<div class="flex flex-col items-center space-y-2 text-center">
